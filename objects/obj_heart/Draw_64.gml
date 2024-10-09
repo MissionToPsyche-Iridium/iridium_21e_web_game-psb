@@ -1,0 +1,1 @@
+draw_sprite(spr_heart, 1, 10, 10)

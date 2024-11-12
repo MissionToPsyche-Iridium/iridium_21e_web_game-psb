@@ -13,7 +13,7 @@
 		// Set to 0
 		flt_move_y = 0;
 
-		if(keyboard_check(vk_space)) {
+		if(keyboard_check_pressed(vk_space)) {
 			flt_move_y = -flt_jump_speed;
 			is_jumping = true;
 			audio_play_sound(snd_jump, 0, false);

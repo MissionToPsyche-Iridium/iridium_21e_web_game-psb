@@ -7,6 +7,7 @@ if place_meeting(x, y+2, obj_floor_1) {
 	
 	if keyboard_check(vk_space) {
 		flt_move_y = -flt_jump_speed;
+		audio_play_sound(snd_jump, 0, false);
 	}
 } else if flt_move_y < 10 {
 	flt_move_y += 1;

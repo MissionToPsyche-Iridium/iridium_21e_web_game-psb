@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":3.004,
+  "duration":4.022833,
   "name":"snd_upgrade",
   "parent":{
     "name":"Sounds",

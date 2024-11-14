@@ -56,6 +56,7 @@
     {"id":{"name":"snd_main","path":"sounds/snd_main/snd_main.yy",},},
     {"id":{"name":"snd_r1","path":"sounds/snd_r1/snd_r1.yy",},},
     {"id":{"name":"snd_upgrade","path":"sounds/snd_upgrade/snd_upgrade.yy",},},
+    {"id":{"name":"space_Background","path":"sprites/space_Background/space_Background.yy",},},
     {"id":{"name":"spr_central_command","path":"sprites/spr_central_command/spr_central_command.yy",},},
     {"id":{"name":"spr_floor_1","path":"sprites/spr_floor_1/spr_floor_1.yy",},},
     {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},},

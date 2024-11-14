@@ -66,6 +66,7 @@
     {"id":{"name":"spr_move_block","path":"sprites/spr_move_block/spr_move_block.yy",},},
     {"id":{"name":"spr_play_button","path":"sprites/spr_play_button/spr_play_button.yy",},},
     {"id":{"name":"spr_resource_1","path":"sprites/spr_resource_1/spr_resource_1.yy",},},
+    {"id":{"name":"spr_resource","path":"sprites/spr_resource/spr_resource.yy",},},
     {"id":{"name":"spr_satellite","path":"sprites/spr_satellite/spr_satellite.yy",},},
     {"id":{"name":"spr_star","path":"sprites/spr_star/spr_star.yy",},},
   ],

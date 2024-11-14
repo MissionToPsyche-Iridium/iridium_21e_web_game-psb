@@ -14,3 +14,5 @@ flt_move_y = 0;
 
 int_hp = 2;
 int_max_hp = 2;
+
+global.resource_1_count = 0;

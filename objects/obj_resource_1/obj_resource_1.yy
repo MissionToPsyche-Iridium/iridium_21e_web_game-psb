@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_inventroy",
+  "%Name":"obj_resource_1",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_hero","path":"objects/obj_hero/obj_hero.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_inventroy",
+  "name":"obj_resource_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_resource_1",
+    "path":"sprites/spr_resource_1/spr_resource_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

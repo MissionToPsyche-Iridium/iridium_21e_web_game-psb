@@ -17,3 +17,4 @@ if(bool_movement_downward) {
 		flt_y_movement = 0;
 	}
 }
+

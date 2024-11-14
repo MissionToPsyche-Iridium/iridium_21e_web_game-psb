@@ -9,7 +9,7 @@
 // Vertical Movement
 //[
 	// If hero meets above floor, then movement in vertical should be 0
-	if(place_meeting(x, y + 2, obj_floor_1)) {
+	if(place_meeting(x, y + 2, obj_floor_1) || place_meeting(x,y+2, obj_moving_platform)) {
 		// Set to 0
 		flt_move_y = 0;
 
@@ -25,6 +25,23 @@
 		flt_move_y += flt_gravity_constant;
 	}
 //]
+
+//Moving platform collision
+var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
+if (moving_platform && bbox_bottom <= moving_platform.bbox_top)
+{
+	if(flt_move_y > 0)
+	{
+		while(!place_meeting(x,y+sign(flt_move_y),obj_moving_platform))
+		{
+			y+= sign(flt_move_y);
+		}
+		flt_move_y = 0;
+	}
+	x += moving_platform.moveX;
+	y += moving_platform.moveY;
+}
+
 
 // Make hero move and appropriately handle collisions
 move_and_collide(flt_move_x, flt_move_y, obj_floor_1);

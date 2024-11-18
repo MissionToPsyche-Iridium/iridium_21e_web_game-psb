@@ -1,20 +1,29 @@
-// Jump Mechanics
-flt_jump_speed = 10;
-flt_gravity_constant = 0.50;
-flt_terminal_fall_speed = 10;
+// Controls Setup
+controlsSetup();
 
-is_jumping = false;
+// Moving
+moveDir = 0;
+moveSpd = 2;
+xspd = 0;
+yspd = 0;
 
-flt_move_speed = 4;
+// Jumping
+grav = .275;
+termVel = 4;
+onGround = true;
+jumpMax = 1;
+jumpCount = 0;
+jumpHoldTimer = 0;
+// Jump values for each successful jump
+jumpHoldFrames[0] = 18;
+jspd[0] = -4.15;
 
 
-
-flt_move_x = 0;
-flt_move_y = 0;
-
+// Health
 int_hp = 2;
 int_max_hp = 2;
 
+// Resources
 global.resource_1_count = 0;
 global.resource_2_count = 0;
 global.resource_3_count = 0;

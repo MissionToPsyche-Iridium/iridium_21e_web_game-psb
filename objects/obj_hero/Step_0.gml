@@ -92,6 +92,7 @@ getControls();
 		jumpHoldTimer = jumpHoldFrames[jumpCount-1];
 		// Tell ourself we're no longer on the ground
 		setOnGround(false);
+		audio_play_sound(snd_jump, 1, false);
 	}
 	// Cut off the jump by releasing the jump button'
 	if !jumpKey {

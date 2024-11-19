@@ -40,12 +40,14 @@
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_floor_1","path":"objects/obj_floor_1/obj_floor_1.yy",},},
     {"id":{"name":"obj_hero","path":"objects/obj_hero/obj_hero.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_moving_platform","path":"objects/obj_moving_platform/obj_moving_platform.yy",},},
     {"id":{"name":"obj_resource_1","path":"objects/obj_resource_1/obj_resource_1.yy",},},
     {"id":{"name":"obj_star","path":"objects/obj_star/obj_star.yy",},},
     {"id":{"name":"Object3","path":"objects/Object3/Object3.yy",},},
     {"id":{"name":"Object9","path":"objects/Object9/Object9.yy",},},
     {"id":{"name":"PlatformPoint","path":"objects/PlatformPoint/PlatformPoint.yy",},},
+    {"id":{"name":"rm_pause","path":"rooms/rm_pause/rm_pause.yy",},},
     {"id":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"general_functions","path":"scripts/general_functions/general_functions.yy",},},
@@ -81,6 +83,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
+    {"roomId":{"name":"rm_pause","path":"rooms/rm_pause/rm_pause.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

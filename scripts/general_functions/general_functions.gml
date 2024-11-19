@@ -21,6 +21,9 @@ function getControls() {
 	jumpKey = keyboard_check(vk_space) + gamepad_button_check(0, gp_face1);
 		jumpKey = clamp(jumpKey, 0, 1);
 		
+	runKey = keyboard_check(ord("F"));
+		runKey = clamp(runKey, 0, 1);
+		
 	// Jump key buffering
 	if jumpKeyPressed {
 		jumpKeyBufferTimer = jumpBufferTime;

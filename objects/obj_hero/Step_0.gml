@@ -4,37 +4,77 @@ getControls();
 // x movement
 	// direction
 	moveDir = rightKey - leftKey;
+	
+	// Get my face
+	if moveDir != 0 {
+		face = moveDir;
+	}
 
 	// Get xspd
-	xspd = moveDir * moveSpd;
+	runType = runKey;
+	xspd = moveDir * moveSpd[runType];
 
 	// x collision
 	var _subPixel = .5;
 	if place_meeting( x + xspd, y, obj_floor_1) {
-		// Scoot up to wall precisely
-		var _pixelCheck = _subPixel * sign(xspd);
-		while !place_meeting(x + _pixelCheck, y, obj_floor_1) {
-			x += _pixelCheck;	
+		
+		// Fist check if there is a slope to go up
+		if !place_meeting( x + xspd, y - abs(xspd)-1, obj_floor_1 ) {
+			while place_meeting(x + xspd, y, obj_floor_1 ) {
+				y -= _subPixel;	
+			}
+		// Next, check for ceiling sloper, otherwise, regular collision
+		} else {
+			// Ceiling slopes
+			if !place_meeting(x + xspd, y + abs(xspd) + 1, obj_floor_1) {
+				while place_meeting(x + xspd, y, obj_floor_1) {
+					y += _subPixel;	
+				}
+			// Normal collision
+			} else {
+				// Scoot up to wall precisely
+				var _pixelCheck = _subPixel * sign(xspd);
+				while !place_meeting(x + _pixelCheck, y, obj_floor_1) {
+					x += _pixelCheck;	
+				}
+
+				// Set xspd to zero to "collide"
+				xspd = 0;
+			}
 		}
+	}
 	
-		// Set xspd to zero to "collide"
-		xspd = 0;	
+	// Go down slopes
+	if yspd >= 0 && !place_meeting(x + xspd, y + 1, obj_floor_1) && place_meeting(x + xspd, y + abs(xspd)+1, obj_floor_1) {
+		while !place_meeting(x + xspd, y + _subPixel, obj_floor_1) {
+			y += _subPixel;	
+		}
 	}
 
 	// move
 	x += xspd;
-
+	
 // y movement
 	// gravity
-	yspd += grav;
+	if coyoteHangTimer > 0 {
+		// Count the timer down
+		coyoteHangTimer--;
+	} else {
+		// Apply gravity to the player
+		yspd += grav;
+		
+		// We're no longer on the ground
+		setOnGround(false);
+	}
 	
 	// Reset / Prepare jumping variables
 	if onGround {
 		jumpCount = 0;
-		jumpHoldTimer = 0;
+		coyoteJumpTimer = coyoteJumpFrame;
 	} else {
 		// if player is in air, make sure they can't do extra jumps
-		if jump == 0 {
+		coyoteJumpTimer--;
+		if jumpCount == 0 && coyoteJumpTimer <= 0 {
 			jumpCount = 1;	
 		}
 	}
@@ -45,11 +85,13 @@ getControls();
 		jumpKeyBuffered = false;
 		jumpKeyBufferTimer = 0;
 		
-		// Increase the number iof performed jumps
+		// Increase the number of performed jumps
 		jumpCount++;
 		
 		// Set the jump hold timer
 		jumpHoldTimer = jumpHoldFrames[jumpCount-1];
+		// Tell ourself we're no longer on the ground
+		setOnGround(false);
 	}
 	// Cut off the jump by releasing the jump button'
 	if !jumpKey {
@@ -72,36 +114,91 @@ getControls();
 
 		// Y Collision
 		var _subPixel = .5;
-		if place_meeting( x, y + yspd, obj_floor_1 ) {
-			// Scoot up to the wall precisely
-			var _pixelCheck = _subPixel * sign(yspd);
-			while !place_meeting( x, y + _pixelCheck, obj_floor_1 ) {
-				y += _pixelCheck;	
+		
+		// Upwards Y Collisions (with ceiling slopes)
+		if yspd < 0 && place_meeting(x, y + yspd, obj_floor_1) {
+			// Jump into sloped ceilings
+			var _slopeSlide = false;
+			
+			// Slide UpLeft slope
+			if moveDir == 0 && !place_meeting(x - abs(yspd)-1, y+yspd, obj_floor_1) {
+				while place_meeting(x, y + yspd, obj_floor_1) {
+					x -= 1;
+				}
+				_slopeSlide = true;
 			}
 			
-			// Bonk code
-			if yspd < 0 {
-					jumpHoldTimer = 0;
+			// Slide UpRight slope
+			if moveDir == 0 && !place_meeting(x + abs(yspd)+1, y + yspd, obj_floor_1) {
+				while place_meeting(x, y + yspd, obj_floor_1) {
+					x += 1;
+				}
+				_slopeSlide = true;
 			}
+			
+			// Normal Y Collision
+			if !_slopeSlide {
+				// Scoot up to the wall precisely
+				var _pixelCheck = _subPixel * sign(yspd);
+				while !place_meeting( x, y + _pixelCheck, obj_floor_1 ) {
+					y += _pixelCheck;	
+				}
+			
+				// Bonk code
+				if yspd < 0 {
+					jumpHoldTimer = 0;
+				}
 		
-			// Set yspd to 0 to collide
-			yspd = 0;
+				// Set yspd to 0 to collide
+				yspd = 0;
+			}
 		}
 		
-		// Set if I am on ground
-		if yspd >= 0 && place_meeting( x, y + 1, obj_floor_1) {
-			onGround = true;
-		} else {
-			onGround = false;	
+		// Downwards Y Collision
+		if yspd >= 0 {
+			if place_meeting( x, y + yspd, obj_floor_1 ) {
+				// Scoot up to the wall precisely
+				var _pixelCheck = _subPixel * sign(yspd);
+				while !place_meeting( x, y + _pixelCheck, obj_floor_1 ) {
+					y += _pixelCheck;	
+				}
+		
+				// Set yspd to 0 to collide
+				yspd = 0;
+			}
+		
+			// Set if I am on ground
+			if place_meeting( x, y + 1, obj_floor_1) {
+				setOnGround(true);
+			}
 		}
 		
 		// Move
 		y += yspd;
 	
+// Sprite Control
+	// Walking
+	if abs(xspd) > 0 {
+		sprite_index = walkSpr;
+	}
 	
+	// Running
+	if abs(xspd) >= moveSpd[1] {
+		sprite_index = runSpr;	
+	}
 	
-
-
+	// Not Moving
+	if xspd == 0 {
+		sprite_index = idleSpr;	
+	}
+	
+	// In the air
+	if !onGround {
+		sprite_index = jumpSpr;	
+	}
+	
+		// set the collision mask
+		mask_index = maskSpr;
 
 
 

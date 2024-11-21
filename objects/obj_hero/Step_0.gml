@@ -40,6 +40,8 @@ getControls();
 
 				// Set xspd to zero to "collide"
 				xspd = 0;
+				
+
 			}
 		}
 	}
@@ -117,7 +119,7 @@ getControls();
 		var _subPixel = .5;
 		
 		// Upwards Y Collisions (with ceiling slopes)
-		if yspd < 0 && place_meeting(x, y + yspd, obj_floor_1) {
+		if yspd < 0 && place_meeting(x, y + yspd, obj_floor_1 ) {
 			// Jump into sloped ceilings
 			var _slopeSlide = false;
 			
@@ -166,11 +168,18 @@ getControls();
 		
 				// Set yspd to 0 to collide
 				yspd = 0;
+
+
 			}
 		
 			// Set if I am on ground
 			if place_meeting( x, y + 1, obj_floor_1) {
 				setOnGround(true);
+			}
+			if place_meeting( x, y + 1, TestPlatform) {
+				setOnGround(true);
+				x += TestPlatform.moveX;
+				y += TestPlatform.moveY;
 			}
 		}
 		
@@ -201,7 +210,21 @@ getControls();
 		// set the collision mask
 		mask_index = maskSpr;
 
-
+//Moving platform collision
+//var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
+//if (moving_platform && bbox_bottom <= moving_platform.bbox_top)
+//{
+//	if(flt_move_y > 0)
+//	{
+//		while(!place_meeting(x,y+sign(flt_move_y),obj_moving_platform))
+//		{
+//			y+= sign(flt_move_y);
+//		}
+//		flt_move_y = 0;
+//	}
+//	x += movingPlatform.moveX;
+//  y += movingPlatform.moveY;
+//}
 
 //// Horizontal Movement
 ////[
@@ -231,21 +254,7 @@ getControls();
 //	}
 ////]
 
-////Moving platform collision
-//var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
-//if (moving_platform && bbox_bottom <= moving_platform.bbox_top)
-//{
-//	if(flt_move_y > 0)
-//	{
-//		while(!place_meeting(x,y+sign(flt_move_y),obj_moving_platform))
-//		{
-//			y+= sign(flt_move_y);
-//		}
-//		flt_move_y = 0;
-//	}
-//	x += moving_platform.moveX;
-//	y += moving_platform.moveY;
-//}
+
 
 
 //// Make hero move and appropriately handle collisions

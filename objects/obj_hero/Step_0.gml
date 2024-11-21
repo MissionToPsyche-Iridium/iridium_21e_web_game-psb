@@ -40,8 +40,6 @@ getControls();
 
 				// Set xspd to zero to "collide"
 				xspd = 0;
-				
-
 			}
 		}
 	}
@@ -168,8 +166,6 @@ getControls();
 		
 				// Set yspd to 0 to collide
 				yspd = 0;
-
-
 			}
 		
 			// Set if I am on ground

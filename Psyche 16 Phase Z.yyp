@@ -51,7 +51,6 @@
     {"id":{"name":"PlatformPoint","path":"objects/PlatformPoint/PlatformPoint.yy",},},
     {"id":{"name":"wall_unlock","path":"objects/wall_unlock/wall_unlock.yy",},},
     {"id":{"name":"CutScene","path":"rooms/CutScene/CutScene.yy",},},
-    {"id":{"name":"rm_pause","path":"rooms/rm_pause/rm_pause.yy",},},
     {"id":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"general_functions","path":"scripts/general_functions/general_functions.yy",},},
@@ -94,7 +93,6 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
-    {"roomId":{"name":"rm_pause","path":"rooms/rm_pause/rm_pause.yy",},},
     {"roomId":{"name":"CutScene","path":"rooms/CutScene/CutScene.yy",},},
   ],
   "templateType":"game",

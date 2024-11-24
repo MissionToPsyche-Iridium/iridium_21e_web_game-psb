@@ -6,4 +6,5 @@ if (paused) {
     draw_text(display_get_width() / 2 - 50, display_get_height() / 2 - 20, "PAUSED");
     draw_text(display_get_width() / 2 - 60, display_get_height() / 2 + 20, "Press ESC to Resume");
     draw_text(display_get_width() / 2 - 70, display_get_height() / 2 + 40, "Press tab for Menu");
+	draw_text(display_get_width() / 2 - 80, display_get_height() / 2 + 60, "Press NumPad0 to Pause Music");
 }

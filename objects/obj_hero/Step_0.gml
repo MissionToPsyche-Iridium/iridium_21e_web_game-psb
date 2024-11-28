@@ -181,6 +181,11 @@ getControls();
 				x += TestPlatform.moveX;
 				y += TestPlatform.moveY;
 			}
+			if place_meeting( x, y + 1, upDown) {
+				setOnGround(true);
+				x += upDown.moveX;
+				y += upDown.moveY;
+			}
 		}
 		
 		// Move

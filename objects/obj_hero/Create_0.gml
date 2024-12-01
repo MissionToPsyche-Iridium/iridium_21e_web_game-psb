@@ -58,6 +58,3 @@ global.resource_2_count = 0;
 global.resource_3_count = 0;
 global.resource_4_count = 0;
 global.resource_5_count = 0;
-
-// Check points
-global.computerFix = 0;

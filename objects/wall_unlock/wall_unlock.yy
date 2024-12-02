@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Empty",
-    "path":"sprites/spr_Empty/spr_Empty.yy",
+    "name":"Planet",
+    "path":"sprites/Planet/Planet.yy",
   },
   "spriteMaskId":null,
   "visible":false,

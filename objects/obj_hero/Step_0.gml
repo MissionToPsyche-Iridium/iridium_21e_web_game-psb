@@ -1,3 +1,11 @@
+if (keyboard_check_pressed(vk_escape)) {
+    paused = !paused; // Toggle the paused state
+}
+
+if(paused) {
+	exit;	
+}
+else {
 // Get Inputs
 getControls();
 
@@ -40,8 +48,6 @@ getControls();
 
 				// Set xspd to zero to "collide"
 				xspd = 0;
-				
-
 			}
 		}
 	}
@@ -168,8 +174,6 @@ getControls();
 		
 				// Set yspd to 0 to collide
 				yspd = 0;
-
-
 			}
 		
 			// Set if I am on ground
@@ -214,7 +218,7 @@ getControls();
 	
 		// set the collision mask
 		mask_index = maskSpr;
-
+}
 //Moving platform collision
 //var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
 //if (moving_platform && bbox_bottom <= moving_platform.bbox_top)

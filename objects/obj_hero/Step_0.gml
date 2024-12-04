@@ -10,17 +10,20 @@ else {
 getControls();
 
 // x movement
-	// direction
-	moveDir = rightKey - leftKey;
+	// Unit Test: TC-003
+	//[
+		// direction
+		moveDir = rightKey - leftKey;
 	
-	// Get my face
-	if moveDir != 0 {
-		face = moveDir;
-	}
+		// Get my face
+		if moveDir != 0 {
+			face = moveDir;
+		}
 
-	// Get xspd
-	runType = runKey;
-	xspd = moveDir * moveSpd[runType];
+		// Get xspd
+		runType = runKey;
+		xspd = moveDir * moveSpd[runType];
+	//]
 
 	// x collision
 	var _subPixel = .5;
@@ -208,7 +211,7 @@ getControls();
 	
 	// Not Moving
 	if xspd == 0 {
-		sprite_index = idleSpr;	
+		sprite_index = idleSpr;
 	}
 	
 	// In the air
@@ -216,9 +219,9 @@ getControls();
 		sprite_index = jumpSpr;	
 	}
 	
-		// set the collision mask
-		mask_index = maskSpr;
-}
+	// set the collision mask
+	mask_index = maskSpr;
+
 //Moving platform collision
 //var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
 //if (moving_platform && bbox_bottom <= moving_platform.bbox_top)

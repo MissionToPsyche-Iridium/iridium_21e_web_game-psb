@@ -119,7 +119,6 @@
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
     {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
-    {"roomId":{"name":"rm_pause","path":"rooms/rm_pause/rm_pause.yy",},},
     {"roomId":{"name":"CutScene","path":"rooms/CutScene/CutScene.yy",},},
   ],
   "templateType":"game",

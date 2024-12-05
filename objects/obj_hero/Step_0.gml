@@ -1,14 +1,14 @@
-//if (keyboard_check_pressed(vk_escape)) {
-//    paused = !paused; // Toggle the paused state
-//}
+if (keyboard_check_pressed(vk_escape)) {
+   paused = !paused; // Toggle the paused state
+}
 
-//if(paused) {
-//	exit;	
-//}
-//else {
+if(paused) {
+	exit;	
+}
+else {
 	// Get Inputs
 	getControls();
-//}
+}
 
 // x movement
 	// Unit Test: TC-003

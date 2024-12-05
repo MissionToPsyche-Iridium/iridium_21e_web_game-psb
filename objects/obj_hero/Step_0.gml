@@ -243,11 +243,14 @@ else {
 				setOnGround(true);
 			}
 			
-			//if place_meeting( x, y + 1, TestPlatform) {
-			//	setOnGround(true);
-			//	x += TestPlatform.moveX;
-			//	y += TestPlatform.moveY;
-			//}
+			// Moving Platform
+			if place_meeting( x, y + 1, obj_moving_platform) {
+				setOnGround(true);
+				x += obj_moving_platform.moveX;
+				y += obj_moving_platform.moveY;
+			}
+			
+			// Up / Down
 			//if place_meeting( x, y + 1, upDown) {
 			//	setOnGround(true);
 			//	x += upDown.moveX;

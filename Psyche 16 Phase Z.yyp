@@ -37,6 +37,7 @@
   },
   "name":"Psyche 16 Phase Z",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"obj_audio","path":"objects/obj_audio/obj_audio.yy",},},
     {"id":{"name":"obj_background_wall","path":"objects/obj_background_wall/obj_background_wall.yy",},},
     {"id":{"name":"obj_computer","path":"objects/obj_computer/obj_computer.yy",},},

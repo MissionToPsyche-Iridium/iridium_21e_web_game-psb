@@ -1,3 +1,4 @@
+// Get Controls
 if (keyboard_check_pressed(vk_escape)) {
    paused = !paused; // Toggle the paused state
 }
@@ -10,62 +11,119 @@ else {
 	getControls();
 }
 
-// x movement
-	// Unit Test: TC-003
-	//[
-		// direction
-		moveDir = rightKey - leftKey;
+// X Movement
+//[
+	// Move Direction
+	// Right = 1
+	// Left = -1
+	// Both = 0
+	moveDir = rightKey - leftKey;
 	
-		// Get my face
-		if moveDir != 0 {
-			face = moveDir;
-		}
+	// Facing Direction
+	// If not moving, keep the same
+	// Otherwise, update face to Move Direction
+	if moveDir != 0 {
+		face = moveDir;
+	}
 
-		// Get xspd
+	// !! Currently Disabled Running for DEMO !!
+	// This needs to be fully documented and tested
+	//[
 		runType = runKey;
+
+		runType = 0;
+	//]
+	
+	// Set X Speed
+	// X Speed = Move Direction * Walking Movement Speed
+	//[
 		xspd = moveDir * moveSpd[runType];
 	//]
 
-	// x collision
-	var _subPixel = .5;
-	if place_meeting( x + xspd, y, obj_floor_1) {
+	// X Collision
+	//[
+		// Create a Sub Pixel variable for scooting movement when colliding
+		var _subPixel = .5;
 		
-		// Fist check if there is a slope to go up
-		if !place_meeting( x + xspd, y - abs(xspd)-1, obj_floor_1 ) {
-			while place_meeting(x + xspd, y, obj_floor_1 ) {
-				y -= _subPixel;	
-			}
-		// Next, check for ceiling sloper, otherwise, regular collision
-		} else {
-			// Ceiling slopes
-			if !place_meeting(x + xspd, y + abs(xspd) + 1, obj_floor_1) {
-				while place_meeting(x + xspd, y, obj_floor_1) {
-					y += _subPixel;	
-				}
-			// Normal collision
+		// If the (X Position of the hero + the X Speed of the hero) meets the collision object
+		// Then enter collision checks
+		// If this is equal to false, then no collision happens and the hero will move forward
+		if place_meeting( x + xspd, y, obj_floor_1) {
+		
+			// Check for slope upwards
+			// This is done by checking to see if there is !not! a place meeting of:
+				// hero x position + x speed
+				// hero y position and the absolute value of hero x speed - 1
+				// With the collision object
+				
+				// Existing Code - From Tutorial
+				//if !place_meeting( x + xspd, y - abs(xspd)-1, obj_floor_1 ) {
+				//while place_meeting(x + xspd, y, obj_floor_1 ) {
+				//	y -= _subPixel;	
+				//}
+				
+				// New Code
+				//[
+					// Slope Meeting
+					var xSlopeMeeting = false;
+			
+					// Check X speed by X speed grid
+					for(var i = 0; i <= abs(xspd); i++) {
+						for(var j = 0; j <= abs(xspd); j++) {
+							// Check upwards
+							if place_meeting( x + moveDir * j, y - i, obj_floor_1 ) {
+								// Verify that there is a pixel to move to
+								for(var k = 0; k <= abs(xspd); k++) {
+									if !place_meeting( x + moveDir * 1, y - i - k, obj_floor_1 ) {
+										xSlopeMeeting = true;
+						
+										break;
+									}
+								}
+							}
+						}
+					}
+				
+					// If there is a slope meeting that can be traversed and hero is on the ground
+					// Then start traversing upwards in the sub pixels until there is no more collision
+					if xSlopeMeeting && onGround {
+						while place_meeting(x + moveDir, y, obj_floor_1 ) {
+							y -= _subPixel;
+						}
+				//]
+			// Next, check for ceiling sloper, otherwise, regular collision
 			} else {
-				// Scoot up to wall precisely
-				var _pixelCheck = _subPixel * sign(xspd);
-				while !place_meeting(x + _pixelCheck, y, obj_floor_1) {
-					x += _pixelCheck;	
-				}
+				// Ceiling slopes
+				if !place_meeting(x + xspd, y + abs(xspd) + 1, obj_floor_1) {
+					while place_meeting(x + xspd, y, obj_floor_1) {
+						y += _subPixel;	
+					}
+				// Normal collision
+				} else {
+					// Scoot up to wall precisely
+					var _pixelCheck = _subPixel * sign(xspd);
+					while !place_meeting(x + _pixelCheck, y, obj_floor_1) {
+						x += _pixelCheck;	
+					}
 
-				// Set xspd to zero to "collide"
-				xspd = 0;
+					// Set xspd to zero to "collide"
+					xspd = 0;
+				}
 			}
 		}
-	}
 	
-	// Go down slopes
-	if yspd >= 0 && !place_meeting(x + xspd, y + 1, obj_floor_1) && place_meeting(x + xspd, y + abs(xspd)+1, obj_floor_1) {
-		while !place_meeting(x + xspd, y + _subPixel, obj_floor_1) {
-			y += _subPixel;	
+		// Go down slopes
+		if yspd >= 0 && !place_meeting(x + xspd, y + 1, obj_floor_1) && place_meeting(x + xspd, y + abs(xspd)+1, obj_floor_1) {
+			while !place_meeting(x + xspd, y + _subPixel, obj_floor_1) {
+				y += _subPixel;	
+			}
 		}
-	}
+	//]
 
-	// move
+	// After all previous checks, move obj_Hero x position within room
 	x += xspd;
-	
+//]
+
 // y movement
 	// gravity
 	if coyoteHangTimer > 0 {
@@ -224,17 +282,20 @@ else {
 	// set the collision mask
 	mask_index = maskSpr;
 
+
+
 //Moving platform collision
-//var moving_platform = instance_place(x,y + max(1,flt_move_y), obj_moving_platform);
+//var moving_platform = instance_place(x,y + max(1, yspd), obj_moving_platform);
+
 //if (moving_platform && bbox_bottom <= moving_platform.bbox_top)
 //{
-//	if(flt_move_y > 0)
+//	if(yspd > 0)
 //	{
-//		while(!place_meeting(x,y+sign(flt_move_y),obj_moving_platform))
+//		while(!place_meeting(x,y+sign(yspd), obj_moving_platform))
 //		{
-//			y+= sign(flt_move_y);
+//			y+= sign(yspd);
 //		}
-//		flt_move_y = 0;
+//		yspd = 0;
 //	}
 //	x += movingPlatform.moveX;
 //  y += movingPlatform.moveY;

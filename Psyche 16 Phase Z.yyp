@@ -86,6 +86,7 @@
     {"id":{"name":"snd_main","path":"sounds/snd_main/snd_main.yy",},},
     {"id":{"name":"snd_r1","path":"sounds/snd_r1/snd_r1.yy",},},
     {"id":{"name":"snd_upgrade","path":"sounds/snd_upgrade/snd_upgrade.yy",},},
+    {"id":{"name":"O2_Bar","path":"sprites/O2_Bar/O2_Bar.yy",},},
     {"id":{"name":"Planet","path":"sprites/Planet/Planet.yy",},},
     {"id":{"name":"PsycheAsteroid","path":"sprites/PsycheAsteroid/PsycheAsteroid.yy",},},
     {"id":{"name":"space_Background","path":"sprites/space_Background/space_Background.yy",},},

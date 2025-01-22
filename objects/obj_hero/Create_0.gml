@@ -58,12 +58,12 @@ global.resource_2_count = 0;
 global.resource_3_count = 0;
 global.resource_4_count = 0;
 global.resource_5_count = 0;
-// oxygen = 0;
-// oxygen_max = 20;
+oxygen = 0;
+oxygen_max = 20;
 
 // Check points
 global.computerFix = 0;
 
 //O2 alarm
 
-// alarm[0] = room_speed * 2;
+alarm[0] = room_speed * 2;

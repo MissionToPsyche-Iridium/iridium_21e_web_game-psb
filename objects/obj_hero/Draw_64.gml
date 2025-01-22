@@ -18,4 +18,4 @@ draw_text(126, 30, string(global.resource_4_count));
 draw_sprite(spr_resource, 4, 156, 30);
 draw_text(156, 30, string(global.resource_5_count));
 
-draw_sprite(O2_Bar, oxygen, 30, 60);
+// draw_sprite(O2_Bar, oxygen, 30, 60);

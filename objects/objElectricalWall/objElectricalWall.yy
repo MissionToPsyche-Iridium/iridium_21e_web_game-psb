@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr30",
-    "path":"sprites/spr30/spr30.yy",
+    "name":"sprRobo30",
+    "path":"sprites/sprRobo30/sprRobo30.yy",
   },
   "spriteMaskId":null,
   "visible":true,

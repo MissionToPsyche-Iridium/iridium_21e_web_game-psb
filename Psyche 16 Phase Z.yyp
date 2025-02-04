@@ -42,7 +42,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"Psyche 16 Phase Z",
   "resources":[
@@ -91,7 +91,11 @@
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"rmLevel1_1","path":"rooms/rmLevel1_1/rmLevel1_1.yy",},},
     {"id":{"name":"rmLevel1","path":"rooms/rmLevel1/rmLevel1.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"rmLevel2","path":"rooms/rmLevel2/rmLevel2.yy",},},
+=======
+    {"id":{"name":"rmLevel5","path":"rooms/rmLevel5/rmLevel5.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"id":{"name":"__crispy_config_macros","path":"scripts/__crispy_config_macros/__crispy_config_macros.yy",},},
     {"id":{"name":"__crispyStructUnpack","path":"scripts/__crispyStructUnpack/__crispyStructUnpack.yy",},},
@@ -759,7 +763,11 @@
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"roomId":{"name":"CutScene","path":"rooms/CutScene/CutScene.yy",},},
+<<<<<<< Updated upstream
     {"roomId":{"name":"rmLevel2","path":"rooms/rmLevel2/rmLevel2.yy",},},
+=======
+    {"roomId":{"name":"rmLevel5","path":"rooms/rmLevel5/rmLevel5.yy",},},
+>>>>>>> Stashed changes
   ],
   "templateType":"game",
   "TextureGroups":[

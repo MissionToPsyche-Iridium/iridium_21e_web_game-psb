@@ -8,8 +8,8 @@
   "name":"objWarningWallRange1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Background",
-    "path":"folders/Objects/Background.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":{
     "name":"objWarningWall",

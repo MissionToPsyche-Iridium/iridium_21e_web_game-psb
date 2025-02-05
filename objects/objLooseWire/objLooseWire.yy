@@ -9,8 +9,8 @@
   "name":"objLooseWire",
   "overriddenProperties":[],
   "parent":{
-    "name":"Background",
-    "path":"folders/Objects/Background.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

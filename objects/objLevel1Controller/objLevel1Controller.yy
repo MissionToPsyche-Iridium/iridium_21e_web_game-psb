@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"objLevel1Controller",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"objLevel1Controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Playable",
+    "path":"folders/Objects/Playable.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -287,11 +287,36 @@ else {
 
 
 
+// Compy Dialog
+if (place_meeting(x, y, objCompy)) { 
+    if (keyboard_check_pressed(ord("E"))) {
+        var target = instance_place(x, y, objCompy);
+        
+        if (target != noone) {
+			global.compyFix = 1;
+			
+			if(global.compyDialogue < 5) {
+				global.compyDialogue += 1;
+			} else {
+				global.compyDialogue = 1;
+			}
+        }
+    }
+}
 
-
-
-
-
+// Server Dialog
+if(global.serverFix == 0) {
+	if (place_meeting(x, y, objServer)) { 
+	    if (keyboard_check_pressed(ord("E"))) {
+	        var target = instance_place(x, y, objServer);
+        
+	        if (target != noone && global.resource_1_count > 0) {
+				global.resource_1_count--;
+				global.serverFix = 1;
+	        }
+	    }
+	}
+}
 
 
 

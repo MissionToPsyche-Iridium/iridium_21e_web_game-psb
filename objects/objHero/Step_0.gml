@@ -322,8 +322,6 @@ if(global.serverFix == 0) {
 
 
 
-
-
 //Moving platform collision
 //var moving_platform = instance_place(x,y + max(1, yspd), obj_moving_platform);
 

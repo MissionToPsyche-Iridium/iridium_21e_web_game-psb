@@ -6,3 +6,7 @@ if (dialogue == noone) {
         dialogue.image_index = global.compyDialogue;
     }
 }
+
+if(global.compyFix == 1) {
+	image_index = 1;	
+}

@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"sprFull",
-  "bboxMode":0,
+  "bboxMode":1,
   "bbox_bottom":31,
   "bbox_left":0,
   "bbox_right":31,
@@ -91,7 +91,7 @@
     },
     "name":"sprFull",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":60.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

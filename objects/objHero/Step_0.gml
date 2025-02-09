@@ -11,6 +11,9 @@ else {
 	getControls();
 }
 
+// set the collision mask
+mask_index = maskSpr;
+
 // X Movement
 //[
 	// Move Direction
@@ -43,7 +46,7 @@ else {
 	// X Collision
 	//[
 		// Create a Sub Pixel variable for scooting movement when colliding
-		var _subPixel = .5;
+		var _subPixel = 0.5;
 		
 		// If the (X Position of the hero + the X Speed of the hero) meets the collision object
 		// Then enter collision checks
@@ -104,6 +107,13 @@ else {
 					var _pixelCheck = _subPixel * sign(xspd);
 					while !place_meeting(x + _pixelCheck, y, objCollision) {
 						x += _pixelCheck;	
+					}
+					
+					// Bug: Backoff if went too far in
+					if(place_meeting(x, y, objCollision)) {
+						while place_meeting(x, y, objCollision) {
+							x -= _pixelCheck;
+						}
 					}
 
 					// Set xspd to zero to "collide"
@@ -184,7 +194,7 @@ else {
 		}
 
 		// Y Collision
-		var _subPixel = .5;
+		var _subPixel = 0.5;
 		
 		// Upwards Y Collisions (with ceiling slopes)
 		if yspd < 0 && place_meeting(x, y + yspd, objCollision ) {
@@ -264,28 +274,27 @@ else {
 // Sprite Control
 	// Walking
 	if abs(xspd) > 0 {
+		image_speed = 0.5;
 		sprite_index = walkSpr;
 	}
 	
 	// Running
 	if abs(xspd) >= moveSpd[1] {
+		image_speed = 0.5;
 		sprite_index = runSpr;	
 	}
 	
 	// Not Moving
 	if xspd == 0 {
+		image_speed = 0.1;
 		sprite_index = idleSpr;
 	}
 	
 	// In the air
 	if !onGround {
+		image_speed = 0.5;
 		sprite_index = jumpSpr;	
 	}
-	
-	// set the collision mask
-	mask_index = maskSpr;
-
-
 
 // Compy Dialog
 if (place_meeting(x, y, objCompy)) { 

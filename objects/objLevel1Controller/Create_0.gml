@@ -5,6 +5,9 @@ global.compyDialogue = 0;
 // Server
 global.serverFix = 0;
 
+// Crane
+global.craneFix = 0;
+
 // Resources
 global.resource_1_count = 0;
 global.resource_2_count = 0;

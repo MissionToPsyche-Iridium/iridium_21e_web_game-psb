@@ -318,6 +318,19 @@ if(global.serverFix == 0) {
 	}
 }
 
+// Crane Dialog
+if(global.craneFix == 0) {
+	if (place_meeting(x, y, objCrane)) { 
+	    if (keyboard_check_pressed(ord("E"))) {
+	        var target = instance_place(x, y, objCrane);
+        
+	        if (target != noone && global.resource_1_count > 0) {
+				global.resource_1_count--;
+				global.craneFix = 1;
+	        }
+	    }
+	}
+}
 
 
 

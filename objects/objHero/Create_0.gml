@@ -67,3 +67,6 @@ global.computerFix = 0;
 //O2 alarm
 
 // alarm[0] = room_speed * 2;
+flashlight_surface = -1;
+flashlight_radius = 100;
+flashlight_active = false;

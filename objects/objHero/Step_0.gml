@@ -9,7 +9,7 @@ if(paused) {
 else {
 	// Get Inputs
 	getControls();
-}
+	// Get the camera ID
 
 // set the collision mask
 mask_index = maskSpr;
@@ -340,7 +340,7 @@ if(global.craneFix == 0) {
 	    }
 	}
 }
-
+}
 
 
 

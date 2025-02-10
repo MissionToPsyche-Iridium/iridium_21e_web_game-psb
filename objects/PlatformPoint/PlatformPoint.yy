@@ -26,8 +26,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"platformID","filters":[],"listItems":[],"multiselect":false,"name":"platformID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"startPoint","filters":[],"listItems":[],"multiselect":false,"name":"startPoint","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"platformID","filters":[],"listItems":[],"multiselect":false,"name":"platformID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"inst_7C077C4A","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"startPoint","filters":[],"listItems":[],"multiselect":false,"name":"startPoint","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

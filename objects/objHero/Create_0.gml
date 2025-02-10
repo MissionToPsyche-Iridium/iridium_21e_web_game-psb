@@ -68,5 +68,5 @@ global.computerFix = 0;
 
 // alarm[0] = room_speed * 2;
 flashlight_surface = -1;
-flashlight_radius = 100;
+flashlight_radius = 120;
 flashlight_active = false;

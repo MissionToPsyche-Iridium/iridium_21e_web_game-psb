@@ -65,7 +65,11 @@ oxygen_max = 20;
 global.computerFix = 0;
 
 //O2 alarm
+
+//uncoment to start O2 drain
+/*
 alarm[0] = room_speed * 2;
+*/
 
 flashlight_surface = -1;
 flashlight_radius = 120;

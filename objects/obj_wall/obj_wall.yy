@@ -12,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_floor_1",
-    "path":"objects/obj_floor_1/obj_floor_1.yy",
+    "name":"objCollision",
+    "path":"objects/objCollision/objCollision.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

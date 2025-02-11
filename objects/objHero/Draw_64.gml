@@ -46,4 +46,4 @@ draw_text(156, 30, string(global.resource_5_count));
 
 
 
-// draw_sprite(O2_Bar, oxygen, 30, 60);
+draw_sprite(O2_Bar, oxygen, 30, 60);

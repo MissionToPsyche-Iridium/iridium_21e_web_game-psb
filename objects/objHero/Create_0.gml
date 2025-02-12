@@ -60,6 +60,7 @@ global.resource_4_count = 0;
 global.resource_5_count = 0;
 oxygen = 0;
 oxygen_max = 20;
+global.goldbox_count = 0;
 
 // Check points
 global.computerFix = 0;

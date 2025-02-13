@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objBackRoomWall",
+  "%Name":"objLevel2Wall",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objBackRoomWall",
+  "name":"objLevel2Wall",
   "overriddenProperties":[],
   "parent":{
     "name":"Fixable",

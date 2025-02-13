@@ -62,6 +62,7 @@ oxygen = 0;
 oxygen_max = 20;
 global.goldbox_count = 0;
 
+
 // Check points
 global.computerFix = 0;
 

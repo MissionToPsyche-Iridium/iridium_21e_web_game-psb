@@ -1,3 +1,18 @@
+// Level 1
+global.level1Fix = 0;
+
+// Level 2
+global.level2Fix = 0;
+
+// Level 3
+global.level3Fix = 0;
+
+// Level 4
+global.level4Fix = 0;
+
+// Level 4
+global.level5Fix = 0;
+
 // Compy
 global.compyFix = 0;
 global.compyDialogue = 0;

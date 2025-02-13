@@ -274,25 +274,25 @@ mask_index = maskSpr;
 // Sprite Control
 	// Walking
 	if abs(xspd) > 0 {
-		image_speed = 0.5;
+		image_speed = 0.13;
 		sprite_index = walkSpr;
 	}
 	
 	// Running
 	if abs(xspd) >= moveSpd[1] {
-		image_speed = 0.5;
+		image_speed = 0.13;
 		sprite_index = runSpr;	
 	}
 	
 	// Not Moving
 	if xspd == 0 {
-		image_speed = 0.1;
+		image_speed = 0.025;
 		sprite_index = idleSpr;
 	}
 	
 	// In the air
 	if !onGround {
-		image_speed = 0.5;
+		image_speed = 0.05;
 		sprite_index = jumpSpr;	
 	}
 
@@ -327,19 +327,33 @@ if(global.serverFix == 0) {
 	}
 }
 
-// Crane Dialog
-if(global.craneFix == 0) {
-	if (place_meeting(x, y, objCrane)) { 
-	    if (keyboard_check_pressed(ord("E"))) {
-	        var target = instance_place(x, y, objCrane);
+	// Crane Dialog
+	if(global.craneFix == 0) {
+		if (place_meeting(x, y, objCrane)) { 
+		    if (keyboard_check_pressed(ord("E"))) {
+		        var target = instance_place(x, y, objCrane);
         
-	        if (target != noone && global.resource_1_count > 0) {
-				global.resource_1_count--;
-				global.craneFix = 1;
-	        }
-	    }
+		        if (target != noone && global.resource_1_count > 0) {
+					global.resource_1_count--;
+					global.craneFix = 1;
+		        }
+		    }
+		}
 	}
-}
+	
+	// Level 2 Fix
+	if(global.level2Fix == 0) {
+		if (place_meeting(x, y, objLevel2)) { 
+		    if (keyboard_check_pressed(ord("E"))) {
+		        var target = instance_place(x, y, objLevel2);
+        
+		        if (target != noone && global.resource_1_count > 0) {
+					global.resource_1_count--;
+					global.level2Fix = 1;
+		        }
+		    }
+		}
+	}
 }
 
 

@@ -1,7 +1,5 @@
 global.goldbox_count += 1;
-global.gb = true;
 
-instance_destroy(inst_709E977E);
+instance_destroy();
 
-room_goto(rmLevel1_1);
-
+room_goto(rmLevel1);

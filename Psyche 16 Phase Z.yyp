@@ -1107,8 +1107,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rmLevel1","path":"rooms/rmLevel1/rmLevel1.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"roomId":{"name":"rmLevel1","path":"rooms/rmLevel1/rmLevel1.yy",},},
     {"roomId":{"name":"rmLevel5","path":"rooms/rmLevel5/rmLevel5.yy",},},
     {"roomId":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
     {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},

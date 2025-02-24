@@ -11,7 +11,7 @@ var tc_003 = new TestCase("tc_003", function() {
     // Move Right
     var moveSpd = [5, 10]; // Walking and running speeds
     var runKey = 0; // Walking
-    var rightKey = 1;
+    var rightKey = 0;
     var leftKey = 0;
 	var face = 1;
 	

@@ -15,7 +15,7 @@
     "name":"objCollision",
     "path":"objects/objCollision/objCollision.yy",
   },
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

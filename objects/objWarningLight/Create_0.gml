@@ -1,1 +1,1 @@
-image_speed = 0.05;
+image_speed = 0.025;

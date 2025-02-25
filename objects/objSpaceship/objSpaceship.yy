@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprSpaceship",
+    "path":"sprites/sprSpaceship/sprSpaceship.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

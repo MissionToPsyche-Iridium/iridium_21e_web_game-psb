@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"Object3",
+  "%Name":"objLevel2ExitTeleporter",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"objHero","path":"objects/objHero/objHero.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Object3",
+  "name":"objLevel2ExitTeleporter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"LevelTeleporters",
+    "path":"folders/Objects/LevelTeleporters.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_play_button",
-    "path":"sprites/spr_play_button/spr_play_button.yy",
+    "name":"sprTeleporter",
+    "path":"sprites/sprTeleporter/sprTeleporter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

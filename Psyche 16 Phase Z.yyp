@@ -111,6 +111,7 @@
     {"id":{"name":"objLevel3Teleporter","path":"objects/objLevel3Teleporter/objLevel3Teleporter.yy",},},
     {"id":{"name":"objLevel4ExitTeleporter","path":"objects/objLevel4ExitTeleporter/objLevel4ExitTeleporter.yy",},},
     {"id":{"name":"objLevel4Teleporter","path":"objects/objLevel4Teleporter/objLevel4Teleporter.yy",},},
+    {"id":{"name":"objLevel5ExitTeleporter","path":"objects/objLevel5ExitTeleporter/objLevel5ExitTeleporter.yy",},},
     {"id":{"name":"objLevel5Teleporter","path":"objects/objLevel5Teleporter/objLevel5Teleporter.yy",},},
     {"id":{"name":"objLight","path":"objects/objLight/objLight.yy",},},
     {"id":{"name":"objLooseWire","path":"objects/objLooseWire/objLooseWire.yy",},},

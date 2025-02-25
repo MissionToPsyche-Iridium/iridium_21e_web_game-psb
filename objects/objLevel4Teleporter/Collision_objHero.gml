@@ -1,3 +1,3 @@
-objHero.x = 227;
-objHero.y = 46;
 room_goto(rmLevel4);
+objHero.x = 240;
+objHero.y = 46;

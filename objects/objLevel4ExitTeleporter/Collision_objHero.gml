@@ -1,3 +1,3 @@
-objHero.x = 2080;
-objHero.y = 1504;
+objHero.x = 2016;
+objHero.y = 1400;
 room_goto(rmLevel1);

@@ -3,6 +3,7 @@ global.level1Fix = 0;
 
 // Level 2
 global.level2Fix = 0;
+global.level2Dialogue = 0;
 
 // Level 3
 global.level3Fix = 0;

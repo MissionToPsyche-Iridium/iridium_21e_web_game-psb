@@ -9,5 +9,6 @@ if(doorTimer > 0)
 else if(doorTimer == 0)
 {
 	doorState = "closed";
-	instance_activate_object(doorName);
+	instance_activate_object(mainDoor);
+	instance_activate_object(airInside);
 }

@@ -1,5 +1,5 @@
 
-obj_hero.oxygen = 0;
+objHero.oxygen = 0;
 
 
 instance_destroy();

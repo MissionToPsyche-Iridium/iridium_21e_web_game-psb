@@ -7,8 +7,9 @@ if(!paused)
 	oxygen = oxygen + 1;
 	if (oxygen == oxygen_max)
 	{
-		obj_hero.x = xstart;
-		obj_hero.y = ystart;
+		room_goto(rmLevel1)
+		objHero.x = 1104;
+		objHero.y = 1312;
 		oxygen = 0;
 	}
 }

@@ -1,9 +1,9 @@
 // Dialogue lines
 dialogue = [
-    "Welcome to the game!",
-    "Your journey begins now.",
-    "Watch out for enemies!",
-    "Good luck, hero!"
+    "Psyche had to sort grains...",
+    "Try to find the real ones..",
+    "Etc.",
+    "Etc."
 ];
 
 dialogue_index = 0; // Start at first dialogue

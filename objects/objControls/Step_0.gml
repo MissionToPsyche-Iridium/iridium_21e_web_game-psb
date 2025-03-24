@@ -1,0 +1,9 @@
+var view_x = camera_get_view_x(view_camera[0]);
+var view_y = camera_get_view_y(view_camera[0]);
+var view_width = camera_get_view_width(view_camera[0]);
+
+var offset_x = -10;
+var offset_y = 10;
+
+x = view_x + view_width + offset_x;
+y = view_y + offset_y;

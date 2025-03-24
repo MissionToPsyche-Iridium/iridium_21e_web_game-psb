@@ -46,7 +46,7 @@ mask_index = maskSpr;
 	// X Collision
 	//[
 		// Create a Sub Pixel variable for scooting movement when colliding
-		var _subPixel = 0.5;
+		var _subPixel = 0.50;
 		
 		// If the (X Position of the hero + the X Speed of the hero) meets the collision object
 		// Then enter collision checks
@@ -112,7 +112,7 @@ mask_index = maskSpr;
 					// Bug: Backoff if went too far in
 					if(place_meeting(x, y, objCollision)) {
 						while place_meeting(x, y, objCollision) {
-							x -= _pixelCheck;
+							x -= 2 * sign(xspd);
 						}
 					}
 
@@ -241,7 +241,7 @@ mask_index = maskSpr;
 				// Scoot up to the wall precisely
 				var _pixelCheck = _subPixel * sign(yspd);
 				while !place_meeting( x, y + _pixelCheck, objCollision ) {
-					y += _pixelCheck;	
+					y += _pixelCheck;
 				}
 		
 				// Set yspd to 0 to collide
@@ -296,48 +296,48 @@ mask_index = maskSpr;
 		sprite_index = jumpSpr;	
 	}
 
-// Compy Dialog
-if (place_meeting(x, y, objCompy)) { 
-    if (keyboard_check_pressed(ord("E"))) {
-        var target = instance_place(x, y, objCompy);
-        
-        if (target != noone) {
-			global.compyFix = 1;
-			
-			if(global.compyDialogue < 5) {
-				global.compyDialogue += 1;
-			} else {
-				global.compyDialogue = 1;
-			}
-        }
-    }
-}
-
-// Server Dialog
-if(global.serverFix == 0) {
-	if (place_meeting(x, y, objServer)) { 
+	// Compy Dialog
+	if (place_meeting(x, y, objCompy)) { 
 	    if (keyboard_check_pressed(ord("E"))) {
-	        var target = instance_place(x, y, objServer);
+	        var target = instance_place(x, y, objCompy);
         
-	        if (target != noone && global.resource_1_count > 0) {
-				global.resource_1_count--;
-				global.serverFix = 1;
+	        if (target != noone) {
+				global.compyFix = 1;
+			
+				if(global.compyDialogue < 5) {
+					global.compyDialogue += 1;
+				} else {
+					global.compyDialogue = 1;
+				}
 	        }
 	    }
 	}
-}
+
+	// Server Dialog
+	if(global.serverFix == 0) {
+		if (place_meeting(x, y, objServer)) { 
+		    if (keyboard_check_pressed(ord("E"))) {
+		        var target = instance_place(x, y, objServer);
+        
+		        if (target != noone && global.resource_1_count > 0) {
+					global.resource_1_count--;
+					global.serverFix = 1;
+		        }
+		    }
+		}
+	}
 
 	// Crane Dialog
 	if(global.craneFix == 0) {
 		if (place_meeting(x, y, objCrane)) { 
-		    if (keyboard_check_pressed(ord("E"))) {
-		        var target = instance_place(x, y, objCrane);
+			if (keyboard_check_pressed(ord("E"))) {
+			    var target = instance_place(x, y, objCrane);
         
-		        if (target != noone && global.resource_1_count > 0) {
+			    if (target != noone && global.resource_1_count > 0) {
 					global.resource_1_count--;
 					global.craneFix = 1;
-		        }
-		    }
+			    }
+			}
 		}
 	}
 	
@@ -350,6 +350,20 @@ if(global.serverFix == 0) {
 		        if (target != noone && global.resource_1_count > 0) {
 					global.resource_1_count--;
 					global.level2Fix = 1;
+		        }
+		    }
+		}
+	}
+	
+	// Level 4 Fix
+	if(global.antennaFix == 0) {
+		if (place_meeting(x, y, objAntenna)) { 
+		    if (keyboard_check_pressed(ord("E"))) {
+		        var target = instance_place(x, y, objAntenna);
+        
+		        if (target != noone && global.resource_1_count > 0) {
+					global.resource_1_count--;
+					global.antennaFix = 1;
 		        }
 		    }
 		}

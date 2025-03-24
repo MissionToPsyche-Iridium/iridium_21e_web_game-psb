@@ -1,9 +1,11 @@
 // Dialogue lines
 dialogue = [
-    "Psyche had to sort grains...",
-    "Try to find the real ones..",
-    "Etc.",
-    "Etc."
+    "My first trial she gave me was to sort grain...",
+	"This asteroid is full of resources to sort...",
+	"Do not worry, I have started sorting some myself...",
+    "I have left you some though...",
+    "Gather and use these resources wisely...",
+    "Otherwise, you will not finish your trial..."
 ];
 
 dialogue_index = 0; // Start at first dialogue

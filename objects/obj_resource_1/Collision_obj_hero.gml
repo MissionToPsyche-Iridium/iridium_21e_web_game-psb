@@ -1,4 +1,4 @@
-if(image_index == 0) {
+/*if(image_index == 0) {
 	global.resource_1_count += 1;
 	audio_play_sound(snd_collect, 1, false);
 } else if(image_index == 1) {
@@ -13,6 +13,6 @@ if(image_index == 0) {
 } else if(image_index == 4) {
 	global.resource_5_count += 1;
 	audio_play_sound(snd_collect5, 1, false);
-}
+}*/
 
 instance_destroy();

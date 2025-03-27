@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sprMoonCave044",
   "bboxMode":0,
-  "bbox_bottom":31,
+  "bbox_bottom":30,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":0,

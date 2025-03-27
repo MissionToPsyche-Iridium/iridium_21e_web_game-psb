@@ -23,13 +23,7 @@
     {"$GMFolder":"","%Name":"Collision","folderPath":"folders/Objects/Collision.yy","name":"Collision","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dialogue","folderPath":"folders/Objects/Dialogue.yy","name":"Dialogue","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fixable","folderPath":"folders/Objects/Fixable.yy","name":"Fixable","resourceType":"GMFolder","resourceVersion":"2.0",},
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     {"$GMFolder":"","%Name":"GUI","folderPath":"folders/Objects/GUI.yy","name":"GUI","resourceType":"GMFolder","resourceVersion":"2.0",},
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     {"$GMFolder":"","%Name":"InitialCutscene","folderPath":"folders/Objects/InitialCutscene.yy","name":"InitialCutscene","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"LevelTeleporters","folderPath":"folders/Objects/LevelTeleporters.yy","name":"LevelTeleporters","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Playable","folderPath":"folders/Objects/Playable.yy","name":"Playable","resourceType":"GMFolder","resourceVersion":"2.0",},

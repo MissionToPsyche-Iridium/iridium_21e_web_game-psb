@@ -312,6 +312,8 @@
     {"name":"inst_5C39084B","path":"rooms/rmLevel4/rmLevel4.yy",},
     {"name":"inst_24E2258","path":"rooms/rmLevel4/rmLevel4.yy",},
     {"name":"inst_7BB3AD78","path":"rooms/rmLevel4/rmLevel4.yy",},
+    {"name":"inst_9D304C3","path":"rooms/rmLevel4/rmLevel4.yy",},
+    {"name":"inst_AE80E00","path":"rooms/rmLevel4/rmLevel4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -634,6 +636,8 @@
         {"$GMRInstance":"v1","%Name":"inst_5C39084B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":4,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C39084B","objectId":{"name":"objLunarCollision32x32","path":"objects/objLunarCollision32x32/objLunarCollision32x32.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-93.35451,"scaleX":1.0,"scaleY":1.0,"x":2088.042,"y":675.7815,},
         {"$GMRInstance":"v1","%Name":"inst_24E2258","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24E2258","objectId":{"name":"ForceField","path":"objects/ForceField/ForceField.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.8037472,"scaleY":1.5194774,"x":1757.4551,"y":424.84677,},
         {"$GMRInstance":"v1","%Name":"inst_7BB3AD78","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":4,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7BB3AD78","objectId":{"name":"obj_resource_1","path":"objects/obj_resource_1/obj_resource_1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1802.0,"y":449.0,},
+        {"$GMRInstance":"v1","%Name":"inst_9D304C3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9D304C3","objectId":{"name":"obj_rm4Music","path":"objects/obj_rm4Music/obj_rm4Music.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":-64.0,},
+        {"$GMRInstance":"v1","%Name":"inst_AE80E00","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_AE80E00","objectId":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":-64.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_6D2FABF","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_6D2FABF","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sprMoonCave021","path":"sprites/sprMoonCave021/sprMoonCave021.yy",},"x":2609.0,"y":741.0,},

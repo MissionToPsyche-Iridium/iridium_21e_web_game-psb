@@ -15,10 +15,6 @@ if (paused) {
 		sound = !sound; 
 		if(sound) {
 			audio_pause_sound(snd_r1);	
-			audio_pause_sound(snd_r2);
-			audio_pause_sound(snd_r3);
-			audio_pause_sound(snd_r4);
-			audio_pause_sound(snd_r5);
 		}
 		if(!sound) {
 			audio_resume_sound(snd_r1);	

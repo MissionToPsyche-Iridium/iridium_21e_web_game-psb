@@ -268,15 +268,11 @@
     {"name":"inst_1E860D37","path":"rooms/rmLevel2/rmLevel2.yy",},
     {"name":"inst_25CF6A85","path":"rooms/rmLevel2/rmLevel2.yy",},
     {"name":"inst_335F8A3A","path":"rooms/rmLevel2/rmLevel2.yy",},
-    {"name":"inst_4F0D42E5","path":"rooms/rmLevel2/rmLevel2.yy",},
-    {"name":"inst_2DCD5FE2","path":"rooms/rmLevel2/rmLevel2.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"gameObjects","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_6F46225E","colour":1694498815,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6F46225E","objectId":{"name":"objLevel2ExitTeleporter","path":"objects/objLevel2ExitTeleporter/objLevel2ExitTeleporter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":1400.0,"y":342.0,},
-        {"$GMRInstance":"v1","%Name":"inst_4F0D42E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4F0D42E5","objectId":{"name":"obj_rm2Music","path":"objects/obj_rm2Music/obj_rm2Music.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":-32.0,},
-        {"$GMRInstance":"v1","%Name":"inst_2DCD5FE2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2DCD5FE2","objectId":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1248.0,"y":-32.0,},
       ],"layers":[],"name":"gameObjects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"assets_z_0","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_7081C131","animationSpeed":1.0,"colour":4289901234,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7081C131","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sprRoboLightOn","path":"sprites/sprRoboLightOn/sprRoboLightOn.yy",},"x":800.0,"y":128.0,},

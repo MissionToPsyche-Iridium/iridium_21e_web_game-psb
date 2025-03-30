@@ -52,6 +52,7 @@ mask_index = maskSpr;
 		// Then enter collision checks
 		// If this is equal to false, then no collision happens and the hero will move forward
 		if place_meeting( x + xspd, y, objCollision) {
+			show_debug_message("Collision Detection");
 		
 			// Check for slope upwards
 			// This is done by checking to see if there is !not! a place meeting of:
@@ -60,45 +61,52 @@ mask_index = maskSpr;
 				// With the collision object
 				
 				// Existing Code - From Tutorial
-				//if !place_meeting( x + xspd, y - abs(xspd)-1, objCollision ) {
-				//while place_meeting(x + xspd, y, objCollision ) {
-				//	y -= _subPixel;	
-				//}
+				if !place_meeting( x + xspd, y - abs(xspd)-1, objCollision ) {
+					show_debug_message("Slope Detection");
+					while place_meeting(x + xspd, y, objCollision ) {
+						y -= _subPixel;	
+					}
 				
-				// New Code
-				//[
-					// Slope Meeting
-					var xSlopeMeeting = false;
+				if(false) {
+					// New Code
+					//[
+						// Slope Meeting
+						var xSlopeMeeting = false;
 			
-					// Check X speed by X speed grid
-					for(var i = 0; i <= abs(xspd); i++) {
-						for(var j = 0; j <= abs(xspd); j++) {
-							// Check upwards
-							if place_meeting( x + moveDir * j, y - i, objCollision ) {
-								// Verify that there is a pixel to move to
-								for(var k = 0; k <= abs(xspd); k++) {
-									if !place_meeting( x + moveDir * 1, y - i - k, objCollision ) {
-										xSlopeMeeting = true;
+						// Check X speed by X speed grid
+						for(var i = 0; i <= abs(xspd); i++) {
+							for(var j = 0; j <= abs(xspd); j++) {
+								// Check upwards
+								if place_meeting( x + moveDir * j, y - i, objCollision ) {
+									// Verify that there is a pixel to move to
+									for(var k = 0; k <= abs(xspd); k++) {
+										if !place_meeting( x + moveDir * 1, y - i - k, objCollision ) {
+											xSlopeMeeting = true;
 						
-										break;
+											break;
+										}
 									}
 								}
 							}
 						}
-					}
 				
-					// If there is a slope meeting that can be traversed and hero is on the ground
-					// Then start traversing upwards in the sub pixels until there is no more collision
-					if xSlopeMeeting && onGround {
-						while place_meeting(x + moveDir, y, objCollision ) {
-							y -= _subPixel;
-						}
-				//]
+						// If there is a slope meeting that can be traversed and hero is on the ground
+						// Then start traversing upwards in the sub pixels until there is no more collision
+						//if xSlopeMeeting && onGround {
+							//show_debug_message("Test");
+							//while place_meeting(x + moveDir, y, objCollision ) {
+							//	show_debug_message("While 1");
+							//	y -= _subPixel;
+							//}
+					//]
+				}
 			// Next, check for ceiling sloper, otherwise, regular collision
 			} else {
 				// Ceiling slopes
 				if !place_meeting(x + xspd, y + abs(xspd) + 1, objCollision) {
+					show_debug_message("Ceiling Slope");
 					while place_meeting(x + xspd, y, objCollision) {
+						show_debug_message("While 2");
 						y += _subPixel;	
 					}
 				// Normal collision
@@ -106,17 +114,45 @@ mask_index = maskSpr;
 					// Scoot up to wall precisely
 					var _pixelCheck = _subPixel * sign(xspd);
 					while !place_meeting(x + _pixelCheck, y, objCollision) {
-						x += _pixelCheck;	
+						show_debug_message("While 3");
+						x += _pixelCheck;
 					}
 					
-					// Bug: Backoff if went too far in
-					if(place_meeting(x, y, objCollision)) {
-						while place_meeting(x, y, objCollision) {
-							x -= 2 * sign(xspd);
+					if(false) {
+						// Bug: Backoff if went too far 
+						if(place_meeting(x - 1, y, objCollision) && place_meeting(x + 1, y, objCollision)) {
+							show_debug_message("Backoff 1");
+						
+							if(place_meeting(x - 2, y, objCollision)) {
+								show_debug_message("Backoff 2");
+								x += 2;
+							} else if(place_meeting(x + 2, y, objCollision)) {
+								show_debug_message("Backoff 3");
+								x -= 2;
+							}
+						} else if(place_meeting(x - 1, y, objCollision)) {
+							show_debug_message("Backoff 4");
+							x += 1;
+						} else if(place_meeting(x + 1, y, objCollision)) {
+							show_debug_message("Backoff 5");
+							x -= 1;
+						}
+					
+						if(place_meeting(x, y, objCollision)) {
+							while place_meeting(x, y, objCollision) {
+								show_debug_message("While 4");
+							
+								if(place_meeting(x + 1, y, objCollision)) {
+									x -= 2;
+								} else {
+									x += 2;
+								}
+							}
 						}
 					}
 
 					// Set xspd to zero to "collide"
+					show_debug_message("Speed set to 0");
 					xspd = 0;
 				}
 			}
@@ -125,6 +161,7 @@ mask_index = maskSpr;
 		// Go down slopes
 		if yspd >= 0 && !place_meeting(x + xspd, y + 1, objCollision) && place_meeting(x + xspd, y + abs(xspd)+1, objCollision) {
 			while !place_meeting(x + xspd, y + _subPixel, objCollision) {
+				show_debug_message("While 5");
 				y += _subPixel;	
 			}
 		}
@@ -204,6 +241,7 @@ mask_index = maskSpr;
 			// Slide UpLeft slope
 			if moveDir == 0 && !place_meeting(x - abs(yspd)-1, y+yspd, objCollision) {
 				while place_meeting(x, y + yspd, objCollision) {
+					show_debug_message("While 6");
 					x -= 1;
 				}
 				_slopeSlide = true;
@@ -212,6 +250,7 @@ mask_index = maskSpr;
 			// Slide UpRight slope
 			if moveDir == 0 && !place_meeting(x + abs(yspd)+1, y + yspd, objCollision) {
 				while place_meeting(x, y + yspd, objCollision) {
+					show_debug_message("While 7");
 					x += 1;
 				}
 				_slopeSlide = true;
@@ -222,6 +261,7 @@ mask_index = maskSpr;
 				// Scoot up to the wall precisely
 				var _pixelCheck = _subPixel * sign(yspd);
 				while !place_meeting( x, y + _pixelCheck, objCollision ) {
+					show_debug_message("While 8");
 					y += _pixelCheck;	
 				}
 			
@@ -241,6 +281,7 @@ mask_index = maskSpr;
 				// Scoot up to the wall precisely
 				var _pixelCheck = _subPixel * sign(yspd);
 				while !place_meeting( x, y + _pixelCheck, objCollision ) {
+					show_debug_message("While 9");
 					y += _pixelCheck;
 				}
 		

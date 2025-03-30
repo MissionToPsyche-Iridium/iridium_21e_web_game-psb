@@ -30,5 +30,5 @@ if (room == rmLevel5) {
 }else{
 	
 //draw_sprite(spr_health, int_hp - 1, 10, 10);
-draw_sprite(sprOxygen, oxygen, 210, 10);
+draw_sprite(sprOxygen, oxygen, 212, 10);
 }

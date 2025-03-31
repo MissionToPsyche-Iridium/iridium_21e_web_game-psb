@@ -1,10 +1,12 @@
 /// @desc Hero Gui
+// Pause
 if(paused) {
 	exit;
-}
-else {
+} else {
 	draw_sprite_ext( sprite_index, image_index, x - camera_get_view_x(view_camera[0]), y - camera_get_view_y(view_camera[0]), image_xscale * face, image_yscale, image_angle, image_blend, image_alpha );
 }
+
+// Room 5
 if (room == rmLevel5) {
     // Ensure surface exists
     if (flashlight_surface == -1 || !surface_exists(flashlight_surface)) {
@@ -27,8 +29,15 @@ if (room == rmLevel5) {
 	//resets the target for the movement
     surface_reset_target();
     draw_surface(flashlight_surface, 0, 0);
-}else{
-	
-//draw_sprite(spr_health, int_hp - 1, 10, 10);
-draw_sprite(sprOxygen, oxygen, 210, 10);
+} else {
+	//draw_sprite(spr_health, int_hp - 1, 10, 10);
+	draw_sprite(sprOxygen, oxygen, 212, 10);
+}
+
+//Tutorial
+if(global.tutorialComplete == 0) {
+	var gui_x = (x + 10) - view_xview[0];
+	var gui_y = (y - 150) - view_yview[0];
+
+	draw_sprite(sprTutorialDialogue, global.tutorialStage, gui_x, gui_y);
 }

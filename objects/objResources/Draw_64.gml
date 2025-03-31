@@ -1,4 +1,9 @@
-if (image_index == 1) {
+var offset_x = 10;
+var offset_y = 10;
+
+draw_sprite(sprResources, sprIndex, offset_x, offset_y);
+
+if (sprIndex == 1) {
     draw_set_color(c_white);
 	
     draw_text(30, 50, string(global.resource_1_count));

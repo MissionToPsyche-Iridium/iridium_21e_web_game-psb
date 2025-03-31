@@ -1145,6 +1145,7 @@
     {"id":{"name":"sprSpaceship","path":"sprites/sprSpaceship/sprSpaceship.yy",},},
     {"id":{"name":"sprStatus","path":"sprites/sprStatus/sprStatus.yy",},},
     {"id":{"name":"sprTeleporter","path":"sprites/sprTeleporter/sprTeleporter.yy",},},
+    {"id":{"name":"sprTutorialDialogue","path":"sprites/sprTutorialDialogue/sprTutorialDialogue.yy",},},
     {"id":{"name":"sprWalk","path":"sprites/sprWalk/sprWalk.yy",},},
     {"id":{"name":"sprWarningLight","path":"sprites/sprWarningLight/sprWarningLight.yy",},},
     {"id":{"name":"sprWarningWall","path":"sprites/sprWarningWall/sprWarningWall.yy",},},

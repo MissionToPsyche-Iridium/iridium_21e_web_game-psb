@@ -1,3 +1,7 @@
+// Tutorial
+global.tutorialComplete = 0;
+global.tutorialStage = 0;
+
 // Custom functions for player
 function setOnGround(_val = true) {
 	if _val == true {

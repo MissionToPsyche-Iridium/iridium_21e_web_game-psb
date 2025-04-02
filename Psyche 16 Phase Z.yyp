@@ -69,6 +69,7 @@
     {"id":{"name":"fntAI","path":"fonts/fntAI/fntAI.yy",},},
     {"id":{"name":"fntDefault","path":"fonts/fntDefault/fntDefault.yy",},},
     {"id":{"name":"Airlock_door_unlock","path":"objects/Airlock_door_unlock/Airlock_door_unlock.yy",},},
+    {"id":{"name":"cave_In","path":"objects/cave_In/cave_In.yy",},},
     {"id":{"name":"FlashLight","path":"objects/FlashLight/FlashLight.yy",},},
     {"id":{"name":"ForceField","path":"objects/ForceField/ForceField.yy",},},
     {"id":{"name":"goldBox","path":"objects/goldBox/goldBox.yy",},},

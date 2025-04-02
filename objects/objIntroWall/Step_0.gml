@@ -1,3 +1,3 @@
-if(global.compyFix == 1) {
+if(global.tutorialComplete == 1) {
 	instance_destroy();
 }

@@ -5,6 +5,5 @@ if(global.tutorialStage == 8) {
 }
 
 if(global.tutorialStage == 9) {
-	global.compyFix = 1;
 	global.tutorialComplete = 1;
 }

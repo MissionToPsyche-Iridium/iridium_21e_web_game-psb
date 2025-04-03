@@ -465,6 +465,7 @@ mask_index = maskSpr;
         
 		    if (target != noone && global.tutorialStage == 6) {
 				global.tutorialStage = 7;
+				global.compyFix = 1;
 				alarm[1] = 300;
 		    }
 		}
@@ -484,6 +485,21 @@ mask_index = maskSpr;
 			}
 		}
 	}
+	
+	// Water fix
+	if(global.level2Fix == 0) {
+		if (place_meeting(x, y, objLevel2)) { 
+			if (keyboard_check_pressed(ord("E"))) {
+			    var target = instance_place(x, y, objLevel2);
+        
+			    if (target != noone && global.resource_1_count >= 1 && global.resource_2_count >= 2 && global.level2Fix == 0) {
+					global.level2Fix = 1;
+					global.resource_1_count--;
+					global.resource_2_count = global.resource_2_count - 2;
+			    }
+			}
+		}
+	}
 
 	// Crane Dialog
 	if(global.craneFix == 0) {
@@ -495,20 +511,6 @@ mask_index = maskSpr;
 					global.resource_1_count--;
 					global.craneFix = 1;
 				}
-			}
-		}
-	}
-	
-	// Level 2 Fix
-	if(global.level2Fix == 0) {
-		if (place_meeting(x, y, objLevel2)) { 
-			if (keyboard_check_pressed(ord("E"))) {
-			    var target = instance_place(x, y, objLevel2);
-        
-			    if (target != noone && global.resource_1_count > 0 && global.level2Fix == 0) {
-					global.resource_1_count--;
-					global.level2Fix = 1;
-			    }
 			}
 		}
 	}

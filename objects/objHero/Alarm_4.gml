@@ -1,1 +1,0 @@
-global.level2Complete = 1;

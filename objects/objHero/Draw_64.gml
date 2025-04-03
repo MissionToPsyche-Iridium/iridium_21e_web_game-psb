@@ -37,11 +37,7 @@ if (room == rmLevel5) {
 
 //Tutorial Dialogue
 if(global.tutorialComplete == 0) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
-	
-	draw_set_color(c_white);
-	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+	draw_sprite(sprTutorialDialogue, 0, 10, camera_get_view_height(view_camera[0]) - 10);
 
 	// First Prompt
 	if(global.tutorialStage == 0) {
@@ -148,76 +144,4 @@ if(global.tutorialComplete == 0) {
 	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "I'’ll unlock the next room. Let’s get robotics online first.");
 		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "We'’re gonna need every robotic arm and wiggly appendage we've got.");
 	}
-}
-
-//Robotics Dialogue
-if(global.tutorialComplete == 1 && global.roboticsComplete == 0) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
-	
-	draw_set_color(c_white);
-	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
-	
-	if(global.serverFix == 0) {
-		draw_set_color(c_green);
-		draw_set_font(fntAI);
-	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Alright, we need to get that core robotic unit humming again.");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "That resource on the left podium might help. Looks like a core module.");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Can you grab it and install it in the override socket to the right?");
-	} else {
-		draw_set_color(c_green);
-		draw_set_font(fntAI);
-	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Bingo-bango! Robotics online. That unlocks more ship systems.");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Let's head to storage and see what else we’ve got to work with.");
-	}
-}
-
-//Storage Dialogue
-if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 0) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
-	
-	draw_set_color(c_white);
-	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
-		
-	draw_set_color(c_green);
-	draw_set_font(fntAI);
-	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Looks like there are some high-grade alloy in the center storage room.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Perfect for patching our systems.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Let's use that to unlock the filtration room on the top left of the ship.");
-}
-
-//Level 2 Dialogue
-if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 0 && global.level2Stage >= 1) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
-	
-	draw_set_color(c_white);
-	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
-
-	draw_set_color(c_green);
-	draw_set_font(fntAI);
-	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "This room’s a mess. Pressure breach on the far side - air''s escaping faster than I can say ''whoosh''!");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "We''ll need to grab what we can to get the machine shop up and running.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Grab one resource at a time and get back to the main compartment!");
-}
-
-//Level 3 Dialogue
-if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 0 && global.level3Stage >= 1) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
-	
-	draw_set_color(c_white);
-	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
-
-	draw_set_color(c_green);
-	draw_set_font(fntAI);
-	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "These rock formations are... unstable.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Be careful! Those materials over there should help us fix the internal VAC doors.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "A warning, this cave looks large, keep an eye out on that oxygen!");
 }

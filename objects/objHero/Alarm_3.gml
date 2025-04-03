@@ -1,0 +1,1 @@
+global.storageComplete = 1;

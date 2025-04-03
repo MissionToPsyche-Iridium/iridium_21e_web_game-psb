@@ -1,6 +1,17 @@
 // Tutorial
 global.tutorialComplete = 0;
 global.tutorialStage = 0;
+global.roboticsComplete = 0;
+global.storageComplete = 0;
+global.level2Complete = 0;
+global.level2Stage = 0;
+global.level3Complete = 0;
+global.level3Stage = 0;
+global.level4Complete = 0;
+global.level4Stage = 0;
+
+dialogueFrame = 0;
+alarm[10] = 30;
 
 // Custom functions for player
 function setOnGround(_val = true) {

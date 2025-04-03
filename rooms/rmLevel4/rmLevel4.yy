@@ -1613,7 +1613,7 @@
   "roomSettings":{
     "Height":3000,
     "inheritRoomSettings":false,
-    "persistent":false,
+    "persistent":true,
     "Width":3000,
   },
   "sequenceId":null,

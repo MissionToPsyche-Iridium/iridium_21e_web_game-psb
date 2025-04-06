@@ -30,9 +30,11 @@ str = strings[next];
 if (keyboard_check_direct(vk_space))
 {
 	holdspace++;
-
 }
 
 if (holdspace > 80) || (xpos < 1) fadeout = 1;
 
-if (a == 1) && (fadeout == 1) room_goto(rmLevel1);
+if (a == 1) && (fadeout == 1) {
+	//camera_set_view_pos(view_camera[0], 1048, 640);
+	room_goto(rmLevel1);
+}

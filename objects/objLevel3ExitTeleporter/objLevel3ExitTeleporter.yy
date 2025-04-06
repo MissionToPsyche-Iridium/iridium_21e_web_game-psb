@@ -34,5 +34,5 @@
     "path":"sprites/sprTeleporter/sprTeleporter.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

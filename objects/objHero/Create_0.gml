@@ -10,6 +10,57 @@ global.level3Stage = 0;
 global.level4Complete = 0;
 global.level4Stage = 0;
 
+// Tutorial Sound
+tutorialStage1SoundStarted = 0;
+tutorialStage2SoundStarted = 0;
+tutorialStage3SoundStarted = 0;
+tutorialStage4SoundStarted = 0;
+tutorialStage5SoundStarted = 0;
+tutorialStage6SoundStarted = 0;
+tutorialStage7SoundStarted = 0;
+tutorialStage8SoundStarted = 0;
+tutorialStage9SoundStarted = 0;
+tutorialStage10SoundStarted = 0;
+soundStage11Started = 0;
+soundStage12Started = 0;
+soundStage13Started = 0;
+soundStage14Started = 0;
+
+// Deactivate bridge
+instance_deactivate_object(bridge1);
+instance_deactivate_object(bridge2);
+instance_deactivate_object(bridge3);
+instance_deactivate_object(bridge4);
+instance_deactivate_object(bridge5);
+instance_deactivate_object(bridge6);
+instance_deactivate_object(bridge7);
+instance_deactivate_object(bridge8);
+instance_deactivate_object(bridge9);
+instance_deactivate_object(bridge10);
+instance_deactivate_object(bridge11);
+instance_deactivate_object(bridge12);
+instance_deactivate_object(bridge13);
+instance_deactivate_object(bridge14);
+instance_deactivate_object(bridge15);
+instance_deactivate_object(bridge16);
+instance_deactivate_object(bridge17);
+instance_deactivate_object(bridge18);
+instance_deactivate_object(bridge19);
+instance_deactivate_object(bridge20);
+instance_deactivate_object(bridge21);
+instance_deactivate_object(bridge22);
+instance_deactivate_object(bridge23);
+instance_deactivate_object(bridge24);
+instance_deactivate_object(bridge25);
+instance_deactivate_object(bridge26);
+instance_deactivate_object(bridge27);
+instance_deactivate_object(bridge28);
+instance_deactivate_object(bridge29);
+instance_deactivate_object(bridge30);
+instance_deactivate_object(bridge31);
+instance_deactivate_object(bridge32);
+instance_deactivate_object(bridge33);
+
 dialogueFrame = 0;
 alarm[10] = 30;
 

@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprServerResources",
-    "path":"sprites/sprServerResources/sprServerResources.yy",
+    "name":"sprCraneResources",
+    "path":"sprites/sprCraneResources/sprCraneResources.yy",
   },
   "spriteMaskId":null,
   "visible":true,

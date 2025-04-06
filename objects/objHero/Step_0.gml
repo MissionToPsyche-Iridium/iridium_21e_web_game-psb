@@ -1,31 +1,62 @@
 // Tutorial
 //[
 	if(global.tutorialComplete == 0) {
-		// Left Movement
-		if(global.tutorialStage < 1 && keyboard_check_pressed(ord("A"))) {
-			if(global.tutorialStage == 0.75) {
-				global.tutorialStage = 1;
-			} else {
-				global.tutorialStage = 0.25;
+		//Movement
+		//[
+			// Sound
+			if(tutorialStage1SoundStarted == 0) {
+				tutorialStage1SoundStarted = 1;
+				audio_sound_gain(sndTutorial1, 0.5, 0);
+				audio_play_sound(sndTutorial1, 1, false);
 			}
-		}
+			
+			if(global.tutorialStage >= 1) {
+				audio_stop_sound(sndTutorial1);	
+			}
+		
+			// Left Movement
+			if(global.tutorialStage < 1 && keyboard_check_pressed(ord("A"))) {
+				if(global.tutorialStage == 0.75) {
+					global.tutorialStage = 1;
+				} else {
+					global.tutorialStage = 0.25;
+				}
+			}
 
-		// Right Movement
-		if(global.tutorialStage < 1 && keyboard_check_pressed(ord("D"))) {
-			if(global.tutorialStage == 0.25) {
-				global.tutorialStage = 1;
-			} else {
-				global.tutorialStage = 0.75;
+			// Right Movement
+			if(global.tutorialStage < 1 && keyboard_check_pressed(ord("D"))) {
+				if(global.tutorialStage == 0.25) {
+					global.tutorialStage = 1;
+				} else {
+					global.tutorialStage = 0.75;
+				}
 			}
-		}
+		//]
 	
 		// Jump Movement
-		if(global.tutorialStage == 1 && keyboard_check_pressed(vk_space)) {
-			global.tutorialStage = 2;
-		}
-	
+		//[
+			// Sound
+			if(global.tutorialStage == 1 && tutorialStage2SoundStarted == 0) {
+				tutorialStage2SoundStarted = 1;
+				audio_sound_gain(sndTutorial2, 0.5, 0);
+				audio_play_sound(sndTutorial2, 1, false);
+			}
+			
+			if(global.tutorialStage == 1 && keyboard_check_pressed(vk_space)) {
+				audio_stop_sound(sndTutorial2);
+				global.tutorialStage = 2;
+			}
+		//]
+		
 		// Resource Toggle
 		if(global.tutorialStage == 2) {
+			// Sound
+			if(tutorialStage3SoundStarted == 0) {
+				tutorialStage3SoundStarted = 1;
+				audio_sound_gain(sndTutorial3, 0.5, 0);
+				audio_play_sound(sndTutorial3, 1, false);
+			}
+			
 			// Copied from objResource
 			//[
 				var mx = device_mouse_x_to_gui(0);
@@ -43,8 +74,17 @@
 					my > offset_y && my < offset_y + gui_height) {
     
 					if (mouse_check_button_pressed(mb_left)) {
+						audio_stop_sound(sndTutorial3);
 					    global.tutorialStage = 3;
-						alarm[1] = 300;
+						
+						// Sound
+						if(tutorialStage4SoundStarted == 0) {
+							tutorialStage4SoundStarted = 1;
+							audio_sound_gain(sndTutorial4, 0.5, 0);
+							audio_play_sound(sndTutorial4, 1, false);
+						}
+						
+						alarm[1] = 1100;
 					}
 				}
 			//]
@@ -52,6 +92,13 @@
 	
 		// Status Toggle
 		if(global.tutorialStage == 4) {
+			// Sound
+			if(tutorialStage5SoundStarted == 0) {
+				tutorialStage5SoundStarted = 1;
+				audio_sound_gain(sndTutorial5, 0.5, 0);
+				audio_play_sound(sndTutorial5, 1, false);
+			}
+			
 			// Copied from objResource
 			//[
 				var mx = device_mouse_x_to_gui(0);
@@ -69,6 +116,7 @@
 					my > offset_y && my < offset_y + gui_height) {
     
 					if (mouse_check_button_pressed(mb_left)) {
+						audio_stop_sound(sndTutorial5);
 					    global.tutorialStage = 5;
 					}
 				}
@@ -77,6 +125,13 @@
 	
 		// Controls Toggle
 		if(global.tutorialStage == 5) {
+			// Sound
+			if(tutorialStage6SoundStarted == 0) {
+				tutorialStage6SoundStarted = 1;
+				audio_sound_gain(sndTutorial6, 0.5, 0);
+				audio_play_sound(sndTutorial6, 1, false);
+			}
+			
 			// Copied from objResource
 			//[
 				var mx = device_mouse_x_to_gui(0);
@@ -95,7 +150,15 @@
 					my > offset_y && my < offset_y + gui_height) {
     
 					if (mouse_check_button_pressed(mb_left)) {
+						audio_stop_sound(sndTutorial6);
 					    global.tutorialStage = 6;
+						
+						// Sound
+						if(tutorialStage7SoundStarted == 0) {
+							tutorialStage7SoundStarted = 1;
+							audio_sound_gain(sndTutorial7, 0.5, 0);
+							audio_play_sound(sndTutorial7, 1, false);
+						}
 					}
 				}
 			//]
@@ -107,7 +170,7 @@
 //[
 	if(global.level2Stage == 1) {
 		global.level2Stage++;
-		alarm[4] = 300;
+		alarm[4] = 1200;
 	}
 //]
 	
@@ -115,7 +178,7 @@
 //[
 	if(global.level3Stage == 1) {
 		global.level3Stage++;
-		alarm[5] = 300;
+		alarm[5] = 1000;
 	}
 //]
 
@@ -331,6 +394,7 @@ mask_index = maskSpr;
 		// Tell ourself we're no longer on the ground
 		setOnGround(false);
 		audio_play_sound(snd_jump, 1, false);
+		audio_sound_gain(snd_jump, 0.25, 0);
 	}
 	// Cut off the jump by releasing the jump button'
 	if !jumpKey {
@@ -464,9 +528,20 @@ mask_index = maskSpr;
 		    var target = instance_place(x, y, objCompy);
         
 		    if (target != noone && global.tutorialStage == 6) {
+				// Sound
+				//[
+					audio_stop_sound(sndTutorial7);
+					
+					if(tutorialStage8SoundStarted == 0) {
+						tutorialStage8SoundStarted = 1;
+						audio_sound_gain(sndTutorial8, 0.5, 0);
+						audio_play_sound(sndTutorial8, 1, false);
+					}
+				//]
+				
 				global.tutorialStage = 7;
 				global.compyFix = 1;
-				alarm[1] = 300;
+				alarm[1] = 1500;
 		    }
 		}
 	}
@@ -478,9 +553,20 @@ mask_index = maskSpr;
 			    var target = instance_place(x, y, objServer);
         
 			    if (target != noone && global.resource_1_count > 0 && global.serverFix == 0) {
+					// Sound
+					//[
+						audio_stop_sound(sndTutorial10);
+					
+						if(soundStage11Started == 0) {
+							soundStage11Started = 1;
+							audio_sound_gain(sndTutorial11, 0.5, 0);
+							audio_play_sound(sndTutorial11, 1, false);
+						}
+					//]
+					
 					global.resource_1_count--;
 					global.serverFix = 1;
-					alarm[2] = 300;
+					alarm[2] = 650;
 			    }
 			}
 		}
@@ -507,9 +593,28 @@ mask_index = maskSpr;
 			if (keyboard_check_pressed(ord("E"))) {
 				var target = instance_place(x, y, objCrane);
         
-				if (target != noone && global.resource_1_count > 0 && global.craneFix == 0) {
+				if (target != noone && global.resource_1_count > 0 && global.resource_2_count > 0 && global.resource_3_count > 0 && global.resource_4_count > 0 && global.resource_5_count > 0 && global.craneFix == 0) {
 					global.resource_1_count--;
+					global.resource_2_count--;
+					global.resource_3_count--;
+					global.resource_4_count--;
+					global.resource_5_count--;
 					global.craneFix = 1;
+				}
+			}
+		}
+	}
+	
+	// Air Vac Dialog
+	if(global.airVacFix == 0) {
+		if (place_meeting(x + 10, y, objInteriorAirLockDoor)) { 
+			if (keyboard_check_pressed(ord("E"))) {
+				var target = instance_place(x + 10, y, objInteriorAirLockDoor);
+				
+				if (target != noone && global.resource_2_count >= 2 && global.resource_4_count >= 2 && global.airVacFix == 0) {
+					global.resource_2_count = global.resource_2_count - 3;
+					global.resource_4_count = global.resource_4_count - 3;
+					global.airVacFix = 1;
 				}
 			}
 		}
@@ -520,11 +625,50 @@ mask_index = maskSpr;
 		if (place_meeting(x, y, objAntenna)) { 
 			if (keyboard_check_pressed(ord("E"))) {
 			    var target = instance_place(x, y, objAntenna);
-        
-			    if (target != noone && global.resource_1_count > 0 && global.antennaFix == 0) {
+				
+				if (target != noone && global.resource_1_count >= 1 && global.resource_2_count >= 1 && global.resource_3_count >= 1 && global.resource_4_count >= 2 && global.resource_5_count >= 3 && global.antennaFix == 0) {
 					global.resource_1_count--;
+					global.resource_2_count--;
+					global.resource_3_count--;
+					global.resource_4_count = global.resource_4_count - 2;
+					global.resource_5_count = global.resource_5_count - 3;
 					global.antennaFix = 1;
-			    }
+				
+					// Build bridge to cave
+					instance_activate_object(bridge1);
+					instance_activate_object(bridge2);
+					instance_activate_object(bridge3);
+					instance_activate_object(bridge4);
+					instance_activate_object(bridge5);
+					instance_activate_object(bridge6);
+					instance_activate_object(bridge7);
+					instance_activate_object(bridge8);
+					instance_activate_object(bridge9);
+					instance_activate_object(bridge10);
+					instance_activate_object(bridge11);
+					instance_activate_object(bridge12);
+					instance_activate_object(bridge13);
+					instance_activate_object(bridge14);
+					instance_activate_object(bridge15);
+					instance_activate_object(bridge16);
+					instance_activate_object(bridge17);
+					instance_activate_object(bridge18);
+					instance_activate_object(bridge19);
+					instance_activate_object(bridge20);
+					instance_activate_object(bridge21);
+					instance_activate_object(bridge22);
+					instance_activate_object(bridge23);
+					instance_activate_object(bridge24);
+					instance_activate_object(bridge25);
+					instance_activate_object(bridge26);
+					instance_activate_object(bridge27);
+					instance_activate_object(bridge28);
+					instance_activate_object(bridge29);
+					instance_activate_object(bridge30);
+					instance_activate_object(bridge31);
+					instance_activate_object(bridge32);
+					instance_activate_object(bridge33);
+				}
 			}
 		}
 	}
@@ -603,3 +747,19 @@ mask_index = maskSpr;
 //} else if(flt_move_y > 0) {
 //	image_index = 7;
 //}
+
+if (room == rmLevel2 && soundStage13Started == 0) {
+	soundStage13Started = 1;
+	
+	audio_stop_sound(sndTutorial12);
+	audio_sound_gain(sndTutorial13, 0.5, 0);
+	audio_play_sound(sndTutorial13, 1, false);
+}
+
+if (room == rmLevel3 && soundStage14Started == 0) {
+	soundStage14Started = 1;
+	
+	audio_stop_sound(sndTutorial13);
+	audio_sound_gain(sndTutorial14, 0.5, 0);
+	audio_play_sound(sndTutorial14, 1, false);
+}

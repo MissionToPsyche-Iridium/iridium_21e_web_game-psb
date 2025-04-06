@@ -1,4 +1,7 @@
 /// @desc Hero Gui
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+		
 // Pause
 if(paused) {
 	exit;
@@ -92,8 +95,9 @@ if(global.tutorialComplete == 0) {
 		draw_set_color(c_green);
 		draw_set_font(fntAI);
 	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Powering up resources HUD text...");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Click Resources");
+	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Initializing HUD start-up program.");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "HUD Display: Resources");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "We will need to collect resources around Psyche to fix the ship!");
 		
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "('Left click' resources in top left to see collected amounts)");
@@ -101,8 +105,9 @@ if(global.tutorialComplete == 0) {
 		draw_set_color(c_green);
 		draw_set_font(fntAI);
 	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Powering up oxygen HUD text...");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "View oxygen");
+	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "HUD Display: Oxygen");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Your spacesuit has an internal oxygen supply, if you let it run low, you will pass out.");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "But don'’t worry! The drones will get you back to the medbay for full recovery!");
 		
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "(If oxygen depletes, player will respawn in medbay)");
@@ -110,8 +115,9 @@ if(global.tutorialComplete == 0) {
 		draw_set_color(c_green);
 		draw_set_font(fntAI);
 	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Powering up status HUD text...");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Click status");
+	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "HUD Display: Status");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "The status is a quick glance at progress made on ship repairs.");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Each of these are vital to getting us off this rock safely!");
 		
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "('Left click' status in top middle to see ship repair progress)");
@@ -119,8 +125,9 @@ if(global.tutorialComplete == 0) {
 		draw_set_color(c_green);
 		draw_set_font(fntAI);
 	
-	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Powering up controls HUD text...");
-		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Click controls");
+	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "HUD Display: Controls");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "If you are still dazed from crash landing, please refer to the control HUD.");
+		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "This display has all the necessary humanoid functions needed to complete this mission.");
 		
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "('Left click' controls in top right to see game controls)");
@@ -201,8 +208,8 @@ if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storag
 	draw_set_color(c_green);
 	draw_set_font(fntAI);
 	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "This room’s a mess. Pressure breach on the far side - air''s escaping faster than I can say ''whoosh''!");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "We''ll need to grab what we can to get the machine shop up and running.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "This room'’s a mess. Pressure breach on the far side - air'’s escaping faster than I can say '’whoosh'’!");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "We'’ll need to grab what we can to get the machine shop up and running.");
 	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Grab one resource at a time and get back to the main compartment!");
 }
 

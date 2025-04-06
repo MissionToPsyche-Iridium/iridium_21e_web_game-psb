@@ -39,3 +39,6 @@ global.resource_5_count = 0;
 
 // AirVac
 global.airVacOn = 0;
+
+// Delete
+global.collectedItems = ds_map_create();

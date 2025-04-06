@@ -18,10 +18,39 @@ if (mx > offset_x && mx < offset_x + gui_width &&
     
     if (mouse_check_button_pressed(mb_left)) {
         if(sprIndex == 0) {
-			sprIndex = 1;	
+			sprIndex = 1;
 		} else {
 			sprIndex = 0;
 		}
 
     }
+}
+
+if(sprIndex > 0) {
+	// There are 6 status checks, therefore 0-7 frames
+	// 0: Closed
+	// 1: None fixed
+	// 2-7: 1-6 fixed
+			
+	// Compy
+	if(global.compyFix == 1 && global.serverFix == 0) {
+		sprIndex = 2;
+	// Robotics
+	} else if(global.serverFix == 1 && global.level2Fix == 0) {
+		sprIndex = 3;
+	// Water
+	} else if(global.level2Fix == 1 && global.craneFix == 0) {
+		sprIndex = 4;
+	// Crane
+	} else if(global.craneFix == 1 && global.airVacFix == 0) {
+		sprIndex = 5;
+	// Air Vac
+	} else if(global.airVacFix == 1 && global.antennaFix == 0) {
+		sprIndex = 6;
+	// Antenna
+	} else if(global.antennaFix == 1) {
+		sprIndex = 7;
+	} else {
+		// Do nothing
+	}	
 }

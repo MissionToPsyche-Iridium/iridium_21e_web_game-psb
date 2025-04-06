@@ -1,118 +1,124 @@
 // Tutorial
 //[
-	// Left Movement
-	if(global.tutorialStage < 1 && keyboard_check_pressed(ord("A"))) {
-		if(global.tutorialStage == 0.75) {
-			global.tutorialStage = 1;
-		} else {
-			global.tutorialStage = 0.25;
+	if(global.tutorialComplete == 0) {
+		// Left Movement
+		if(global.tutorialStage < 1 && keyboard_check_pressed(ord("A"))) {
+			if(global.tutorialStage == 0.75) {
+				global.tutorialStage = 1;
+			} else {
+				global.tutorialStage = 0.25;
+			}
+		}
+
+		// Right Movement
+		if(global.tutorialStage < 1 && keyboard_check_pressed(ord("D"))) {
+			if(global.tutorialStage == 0.25) {
+				global.tutorialStage = 1;
+			} else {
+				global.tutorialStage = 0.75;
+			}
+		}
+	
+		// Jump Movement
+		if(global.tutorialStage == 1 && keyboard_check_pressed(vk_space)) {
+			global.tutorialStage = 2;
+		}
+	
+		// Resource Toggle
+		if(global.tutorialStage == 2) {
+			// Copied from objResource
+			//[
+				var mx = device_mouse_x_to_gui(0);
+				var my = device_mouse_y_to_gui(0);
+
+				// GUI element position
+				var offset_x = 10;
+				var offset_y = 10;
+
+				var gui_width = 192;
+				var gui_height = 20;
+
+				// Basic hitbox check
+				if (mx > offset_x && mx < offset_x + gui_width &&
+					my > offset_y && my < offset_y + gui_height) {
+    
+					if (mouse_check_button_pressed(mb_left)) {
+					    global.tutorialStage = 3;
+						alarm[1] = 300;
+					}
+				}
+			//]
+		}
+	
+		// Status Toggle
+		if(global.tutorialStage == 4) {
+			// Copied from objResource
+			//[
+				var mx = device_mouse_x_to_gui(0);
+				var my = device_mouse_y_to_gui(0);
+
+				// GUI element position
+				var offset_x = 342;
+				var offset_y = 10;
+
+				var gui_width = 463;
+				var gui_height = 20;
+				
+				// Basic hitbox check
+				if (mx > offset_x && mx < offset_x + gui_width &&
+					my > offset_y && my < offset_y + gui_height) {
+    
+					if (mouse_check_button_pressed(mb_left)) {
+					    global.tutorialStage = 5;
+					}
+				}
+			//]
+		}
+	
+		// Controls Toggle
+		if(global.tutorialStage == 5) {
+			// Copied from objResource
+			//[
+				var mx = device_mouse_x_to_gui(0);
+				var my = device_mouse_y_to_gui(0);
+				var view_width = camera_get_view_width(view_camera[0]);
+
+				// GUI element position
+				var offset_x = view_width - 10 - 384;
+				var offset_y = 10;
+
+				var gui_width = 384;
+				var gui_height = 20;
+
+				// Basic hitbox check
+				if (mx > offset_x && mx < offset_x + gui_width &&
+					my > offset_y && my < offset_y + gui_height) {
+    
+					if (mouse_check_button_pressed(mb_left)) {
+					    global.tutorialStage = 6;
+					}
+				}
+			//]
 		}
 	}
+//]
 
-	// Right Movement
-	if(global.tutorialStage < 1 && keyboard_check_pressed(ord("D"))) {
-		if(global.tutorialStage == 0.25) {
-			global.tutorialStage = 1;
-		} else {
-			global.tutorialStage = 0.75;
-		}
-	}
-	
-	// Jump Movement
-	if(global.tutorialStage == 1 && keyboard_check_pressed(vk_space)) {
-		global.tutorialStage = 2;
-	}
-	
-	// Resource Toggle
-	if(global.tutorialStage == 2) {
-		// Copied from objResource
-		//[
-			var mx = device_mouse_x_to_gui(0);
-			var my = device_mouse_y_to_gui(0);
-
-			// GUI element position
-			var offset_x = 10;
-			var offset_y = 10;
-
-			var gui_width = 192;
-			var gui_height = 96;
-
-			if(sprIndex == 0) {
-				gui_height = 20;
-			}
-
-			// Basic hitbox check
-			if (mx > offset_x && mx < offset_x + gui_width &&
-				my > offset_y && my < offset_y + gui_height) {
-    
-				if (mouse_check_button_pressed(mb_left)) {
-				    global.tutorialStage = 3;
-					alarm[1] = 300;
-				}
-			}
-		//]
-	}
-	
-	// Status Toggle
-	if(global.tutorialStage == 4) {
-		// Copied from objResource
-		//[
-			var mx = device_mouse_x_to_gui(0);
-			var my = device_mouse_y_to_gui(0);
-
-			// GUI element position
-			var offset_x = 342;
-			var offset_y = 10;
-
-			var gui_width = 463;
-			var gui_height = 100;
-
-			if(sprIndex == 0) {
-				gui_height = 20;
-			}
-
-			// Basic hitbox check
-			if (mx > offset_x && mx < offset_x + gui_width &&
-				my > offset_y && my < offset_y + gui_height) {
-    
-				if (mouse_check_button_pressed(mb_left)) {
-				    global.tutorialStage = 5;
-				}
-			}
-		//]
-	}
-	
-	// Controls Toggle
-	if(global.tutorialStage == 5) {
-		// Copied from objResource
-		//[
-			var mx = device_mouse_x_to_gui(0);
-			var my = device_mouse_y_to_gui(0);
-			var view_width = camera_get_view_width(view_camera[0]);
-
-			// GUI element position
-			var offset_x = view_width - 10 - 384;
-			var offset_y = 10;
-
-			var gui_width = 384;
-			var gui_height = 96;
-
-			if(sprIndex == 0) {
-				gui_height = 20;
-			}
-
-			// Basic hitbox check
-			if (mx > offset_x && mx < offset_x + gui_width &&
-				my > offset_y && my < offset_y + gui_height) {
-    
-				if (mouse_check_button_pressed(mb_left)) {
-				    global.tutorialStage = 6;
-				}
-			}
-		//]
+// Level 2
+//[
+	if(global.level2Stage == 1) {
+		global.level2Stage++;
+		alarm[4] = 300;
 	}
 //]
 	
+// Level 3
+//[
+	if(global.level3Stage == 1) {
+		global.level3Stage++;
+		alarm[5] = 300;
+	}
+//]
+
 // Get Controls
 if (keyboard_check_pressed(vk_escape)) {
 	paused = !paused; // Toggle the paused state
@@ -459,7 +465,6 @@ mask_index = maskSpr;
         
 		    if (target != noone && global.tutorialStage == 6) {
 				global.tutorialStage = 7;
-				global.compyFix = 1;
 				alarm[1] = 300;
 		    }
 		}
@@ -474,21 +479,7 @@ mask_index = maskSpr;
 			    if (target != noone && global.resource_1_count > 0 && global.serverFix == 0) {
 					global.resource_1_count--;
 					global.serverFix = 1;
-			    }
-			}
-		}
-	}
-	
-	// Water fix
-	if(global.level2Fix == 0) {
-		if (place_meeting(x, y, objLevel2)) { 
-			if (keyboard_check_pressed(ord("E"))) {
-			    var target = instance_place(x, y, objLevel2);
-        
-			    if (target != noone && global.resource_1_count >= 1 && global.resource_2_count >= 2 && global.level2Fix == 0) {
-					global.level2Fix = 1;
-					global.resource_1_count--;
-					global.resource_2_count = global.resource_2_count - 2;
+					alarm[2] = 300;
 			    }
 			}
 		}
@@ -504,6 +495,20 @@ mask_index = maskSpr;
 					global.resource_1_count--;
 					global.craneFix = 1;
 				}
+			}
+		}
+	}
+	
+	// Level 2 Fix
+	if(global.level2Fix == 0) {
+		if (place_meeting(x, y, objLevel2)) { 
+			if (keyboard_check_pressed(ord("E"))) {
+			    var target = instance_place(x, y, objLevel2);
+        
+			    if (target != noone && global.resource_1_count > 0 && global.level2Fix == 0) {
+					global.resource_1_count--;
+					global.level2Fix = 1;
+			    }
 			}
 		}
 	}

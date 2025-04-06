@@ -24,9 +24,6 @@ global.serverFix = 0;
 // Crane
 global.craneFix = 0;
 
-// AirVac fix
-global.airVacFix = 0;
-
 // Antenna
 global.antennaFix = 0;
 

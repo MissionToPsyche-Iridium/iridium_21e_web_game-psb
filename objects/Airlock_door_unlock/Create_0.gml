@@ -3,3 +3,4 @@
 
 counter = 0;
 doorState = "closed";
+doorTimer = 0;

@@ -208,8 +208,8 @@ if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storag
 	draw_set_color(c_green);
 	draw_set_font(fntAI);
 	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "This room'’s a mess. Pressure breach on the far side - air'’s escaping faster than I can say '’whoosh'’!");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "We'’ll need to grab what we can to get the machine shop up and running.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "This room'’s a mess. Pressure breach on the far side - air'’s escaping faster than I");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "can say '’whoosh'’! We'’ll need to grab what we can to get the machine shop up and running.");
 	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Grab one resource at a time and get back to the main compartment!");
 }
 
@@ -227,4 +227,102 @@ if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storag
 	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "These rock formations are... unstable.");
 	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Be careful! Those materials over there should help us fix the internal VAC doors.");
 	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "A warning, this cave looks large, keep an eye out on that oxygen!");
+}
+
+//Level 4 Starting Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 0 && global.level4Stage == 1) {
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Whoa. My sensors are identifying some sort of liquid.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "It's energy is off the charts... Some repellent force.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "There is also some sort of artifact at the bottom of this resource rich cave.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 50, "Investigate with caution.");
+}
+
+//Level 4 Ending Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 0 && global.level4Stage == 4) {
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "The water has released it's repellent force. But something is off...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Please get back to the ship and repair the antenna.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "We need to find fuel so that we can leave.");
+}
+
+//Level 5 Starting Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 1 && global.level5Stage == 1) {
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "All systems... green. Except fuel.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Getting strange read-readings east of the sh-ship.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Looks promising, but... sss-something’s off...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 50, "Bridge to source constructed...");
+}
+
+//Level 5 Cave entering Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 1 && global.level5Stage == 3) {
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "A-a-a-a... Admr... wa–rning... not s-s-saf-");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Zebra... ice cream... solar nap... uhhh... blip.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "...");
+}
+
+//Level 5 Psyche 1 Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 1 && global.level5Stage == 5) {
+	draw_sprite_ext(sprPsycheDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "Psyche");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "...I’ve walked these trials too... keep going...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "...watch for the box...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "...");
+}
+
+//Level 5 Psyche 2 Dialogue
+if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 1 && global.level5Stage == 7) {
+	draw_sprite_ext(sprPsycheDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	
+	draw_set_color(c_white);
+	draw_set_font(fntDefault);
+	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "Psyche");
+
+	draw_set_color(c_green);
+	draw_set_font(fntAI);
+	
+	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "...You find it...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "...or you stay here with me...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "...forever...");
 }

@@ -674,7 +674,50 @@ mask_index = maskSpr;
 	}
 }
 
+// Enter level 4
+if(room = rmLevel4 && global.level4Stage == 0) {
+	global.level4Stage = 1;
+	
+	alarm[6] = 1350;
+}
 
+// Get artifact
+if(global.level4Stage == 3) {
+	global.level4Stage = 4;
+	
+	alarm[6] = 1000;
+}
+
+// Antenna Fix
+if(global.antennaFix == 1 && global.level5Stage == 0) {
+	global.level5Stage = 1;
+
+	alarm[7] = 1000;
+}
+
+// Enter level 5
+// Bugging out
+if(room = rmLevel5 && global.level5Stage <= 2) {
+	global.level5Stage = 3;
+	
+	alarm[7] = 850;
+}
+
+// Psyche Talks to you
+// Round 1
+if(global.level5Stage == 4) {
+	global.level5Stage = 5;
+	
+	alarm[7] = 650;
+}
+
+// Psyche Talks to you
+// Round 2
+if(global.level5Stage == 6) {
+	global.level5Stage = 7;
+	
+	alarm[7] = 650;
+}
 
 //Moving platform collision
 //var moving_platform = instance_place(x,y + max(1, yspd), obj_moving_platform);
@@ -762,4 +805,52 @@ if (room == rmLevel3 && soundStage14Started == 0) {
 	audio_stop_sound(sndTutorial13);
 	audio_sound_gain(sndTutorial14, 0.5, 0);
 	audio_play_sound(sndTutorial14, 1, false);
+}
+
+if (room == rmLevel4 && soundStage15Started == 0) {
+	soundStage15Started = 1;
+	
+	audio_stop_sound(sndTutorial14);
+	audio_sound_gain(sndTutorial15, 0.5, 0);
+	audio_play_sound(sndTutorial15, 1, false);
+}
+
+if (room == rmLevel4 && soundStage16Started == 0 && global.level4Stage == 4) {
+	soundStage16Started = 1;
+	
+	audio_stop_sound(sndTutorial15);
+	audio_sound_gain(sndTutorial16, 0.5, 0);
+	audio_play_sound(sndTutorial16, 1, false);
+}
+
+if (soundStage17Started == 0 && global.level5Stage == 1) {
+	soundStage17Started = 1;
+	
+	audio_stop_sound(sndTutorial16);
+	audio_sound_gain(sndTutorial17, 0.5, 0);
+	audio_play_sound(sndTutorial17, 1, false);
+}
+
+if (soundStage18Started == 0 && global.level5Stage == 3) {
+	soundStage18Started = 1;
+	
+	audio_stop_sound(sndTutorial17);
+	audio_sound_gain(sndTutorial18, 0.5, 0);
+	audio_play_sound(sndTutorial18, 1, false);
+}
+
+if (soundStage19Started == 0 && global.level5Stage == 5) {
+	soundStage19Started = 1;
+	
+	audio_stop_sound(sndTutorial18);
+	audio_sound_gain(sndPsyche1, 0.5, 0);
+	audio_play_sound(sndPsyche1, 1, false);
+}
+
+if (soundStage20Started == 0 && global.level5Stage == 7) {
+	soundStage20Started = 1;
+	
+	audio_stop_sound(sndPsyche1);
+	audio_sound_gain(sndPsyche2, 0.5, 0);
+	audio_play_sound(sndPsyche2, 1, false);
 }

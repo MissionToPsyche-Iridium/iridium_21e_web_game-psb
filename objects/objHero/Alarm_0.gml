@@ -4,13 +4,15 @@
 
 if(!paused)
 {
-	oxygen = oxygen + 1;
-	if (oxygen == oxygen_max)
-	{
-		room_goto(rmLevel1)
-		objHero.x = 1104;
-		objHero.y = 1312;
-		oxygen = 0;
+	if(room != rmLevel5) {
+		oxygen = oxygen + 1;
+		if (oxygen == oxygen_max)
+		{
+			room_goto(rmLevel1)
+			objHero.x = 1104;
+			objHero.y = 1312;
+			oxygen = 0;
+		}
 	}
 }
 alarm[0] = room_speed * 2;

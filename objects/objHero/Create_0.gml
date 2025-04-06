@@ -9,6 +9,8 @@ global.level3Complete = 0;
 global.level3Stage = 0;
 global.level4Complete = 0;
 global.level4Stage = 0;
+global.level5Complete = 0;
+global.level5Stage = 0;
 
 // Tutorial Sound
 tutorialStage1SoundStarted = 0;
@@ -25,6 +27,12 @@ soundStage11Started = 0;
 soundStage12Started = 0;
 soundStage13Started = 0;
 soundStage14Started = 0;
+soundStage15Started = 0;
+soundStage16Started = 0;
+soundStage17Started = 0;
+soundStage18Started = 0;
+soundStage19Started = 0;
+soundStage20Started = 0;
 
 // Deactivate bridge
 instance_deactivate_object(bridge1);

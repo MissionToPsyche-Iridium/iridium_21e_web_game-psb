@@ -1,5 +1,13 @@
 // Tutorial
 //[
+if (keyboard_check_pressed(vk_escape)) {
+	paused = !paused; // Toggle the paused state
+}
+
+if(paused) {
+	exit;	
+}
+else {
 	if(global.tutorialComplete == 0) {
 		//Movement
 		//[
@@ -183,14 +191,6 @@
 //]
 
 // Get Controls
-if (keyboard_check_pressed(vk_escape)) {
-	paused = !paused; // Toggle the paused state
-}
-
-if(paused) {
-	exit;	
-}
-else {
 	// Get Inputs
 	getControls();
 	// Get the camera ID

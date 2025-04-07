@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_r5",
+  "%Name":"snd_collect4",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":172.78133,
-  "name":"snd_r5",
+  "duration":1.018667,
+  "name":"snd_collect4",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_r5.mp3",
+  "soundFile":"snd_collect4.mp3",
   "type":0,
-  "volume":0.025,
+  "volume":1.0,
 }

@@ -1,4 +1,5 @@
 // Tutorial
+if(!paused) {
 if(global.tutorialComplete == 0) {
 	global.tutorialStage++;
 	
@@ -22,4 +23,5 @@ if(global.tutorialComplete == 0) {
 		// Unlock doors
 		global.tutorialComplete = 1;
 	}
+}
 }

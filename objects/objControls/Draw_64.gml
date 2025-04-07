@@ -1,4 +1,4 @@
-if(room != rmLevel5) {
+if(room != (rmLevel5 || rm_start || rmFinalCutscene || rmInitialCutscene)) {
 	var view_width = camera_get_view_width(view_camera[0]);
 
 	var offset_x = view_width - 10;

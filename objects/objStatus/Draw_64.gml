@@ -1,4 +1,4 @@
-if(room != rmLevel5) {
+if(room != (rmLevel5 || rm_start || rmFinalCutscene || rmInitialCutscene) {
 	var offset_x = 342;
 	var offset_y = 10;
 

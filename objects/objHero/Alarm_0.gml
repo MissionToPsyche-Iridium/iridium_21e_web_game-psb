@@ -4,7 +4,7 @@
 
 if(!paused)
 {
-	if(room != rmLevel5) {
+	if(room != (rmLevel5 || rmFinalCutscene || rm_start)) {
 		oxygen = oxygen + 1;
 		if (oxygen == oxygen_max)
 		{

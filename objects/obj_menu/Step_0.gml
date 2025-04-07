@@ -14,10 +14,19 @@ if (paused) {
 	if(keyboard_check_pressed(vk_numpad0)) {
 		sound = !sound; 
 		if(sound) {
-			audio_pause_sound(snd_r1);	
+			audio_pause_sound(snd_r1);
+			audio_pause_sound(snd_r2);
+			audio_pause_sound(snd_r3);
+			audio_pause_sound(snd_r4);
+			audio_pause_sound(snd_r5);
 		}
 		if(!sound) {
-			audio_resume_sound(snd_r1);	
+			audio_resume_sound(snd_r1);
+			audio_resume_sound(snd_r2);	
+			audio_resume_sound(snd_r3);	
+			audio_resume_sound(snd_r4);	
+			audio_resume_sound(snd_r5);	
+			
 		}
 	}
 }

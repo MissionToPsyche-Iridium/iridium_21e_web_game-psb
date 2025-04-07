@@ -1,5 +1,6 @@
 objHero.x = 1344;
 objHero.y = 416;
+audio_stop_sound(snd_r1);
 room_goto(rmLevel2);
 
 global.roboticsComplete = 1;

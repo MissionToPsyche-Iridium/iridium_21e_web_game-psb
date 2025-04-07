@@ -8,7 +8,8 @@ if(!paused)
 		oxygen = oxygen + 1;
 		if (oxygen == oxygen_max)
 		{
-			room_goto(rmLevel1)
+			audio_stop_all();
+			room_goto(rmLevel1);
 			objHero.x = 1104;
 			objHero.y = 1312;
 			oxygen = 0;

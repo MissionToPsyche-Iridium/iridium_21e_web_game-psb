@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSpaceship",
-    "path":"sprites/sprSpaceship/sprSpaceship.yy",
+    "name":"sprSpaceship_2",
+    "path":"sprites/sprSpaceship_2/sprSpaceship_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

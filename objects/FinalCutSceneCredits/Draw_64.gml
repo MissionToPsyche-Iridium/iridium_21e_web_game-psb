@@ -14,4 +14,5 @@ if (holdspace > 0)
 	draw_set_alpha(1);
 }
 
-draw_sprite_ext(sPixel,0,0,0,1280,720,0,c_black,a);
+//draw_sprite_ext(sPixel,0,0,0,1280,720,0,c_black,a);
+draw_sprite_ext(sPixel,0,0,0,1380,820,0,c_black,a);

@@ -1,5 +1,5 @@
 global.roboticsComplete = 1;
-if(!paused) {
+
 if(soundStage12Started == 0) {
 	soundStage12Started = 1;
 	audio_sound_gain(sndTutorial12, 0.5, 0);
@@ -7,4 +7,3 @@ if(soundStage12Started == 0) {
 }
 
 alarm[3] = 1000;
-}

@@ -4,7 +4,7 @@ draw_set_valign(fa_top);
 draw_set_font(fMonitor);
 
 //draw_sprite_ext(sPixel,0,0,0,1280,200,0,c_black,1);
-draw_sprite_ext(sPixel,0,0,570,1280,200,0,c_black,1);
+draw_sprite_ext(sPixel,0,0,570,1380,200,0,c_black,1);
 draw_text(640,600,print);
 
 if (holdspace > 0)
@@ -14,4 +14,4 @@ if (holdspace > 0)
 	//draw_set_alpha(1);
 }
 
-draw_sprite_ext(sPixel,0,0,0,1280,720,0,c_black,a);
+draw_sprite_ext(sPixel,0,0,0,1380,720,0,c_black,a);

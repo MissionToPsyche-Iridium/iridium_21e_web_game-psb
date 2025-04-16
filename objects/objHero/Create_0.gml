@@ -1,8 +1,5 @@
 // Tutorial
-global.tutorialComplete = 0;
-global.tutorialStage = 0;
 global.roboticsComplete = 0;
-global.storageComplete = 0;
 global.level2Complete = 0;
 global.level2Stage = 0;
 global.level3Complete = 0;
@@ -151,3 +148,13 @@ alarm[0] = room_speed * 2;
 flashlight_surface = -1;
 flashlight_radius = 120;
 flashlight_active = false;
+
+
+
+if(global.bypass == 1) {
+	if(tutorialStage10SoundStarted == 0) {
+		tutorialStage10SoundStarted = 1;
+		audio_sound_gain(sndTutorial10, 0.5, 0);
+		audio_play_sound(sndTutorial10, 1, false);
+	}
+}

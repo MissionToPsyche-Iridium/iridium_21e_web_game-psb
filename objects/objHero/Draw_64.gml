@@ -32,10 +32,11 @@ if (room == rmLevel5) {
 	//resets the target for the movement
     surface_reset_target();
     draw_surface(flashlight_surface, 0, 0);
-} else {
-	if(global.tutorialStage >= 3) {
-		draw_sprite(sprOxygen, oxygen, 212, 10);
-	}
+}
+
+// Always show oxygen
+if(global.tutorialStage >= 3 || global.tutorialComplete == 1) {
+	draw_sprite(sprOxygen, oxygen, 212, 10);
 }
 
 //Tutorial Dialogue
@@ -65,7 +66,7 @@ if(global.tutorialComplete == 0) {
 	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Wowzers, Admiral Smith! That landing was... not ideal.");
 		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Diagnostics suggest we just performed an unscheduled lithobrake maneuver.");
 		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Let’s start with the basics. Can you move your feet for me?");
-		draw_text(213, camera_get_view_height(view_camera[0]) - 50, "A");
+		draw_text(209, camera_get_view_height(view_camera[0]) - 50, "A");
 	
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "(' ' to move left and 'D' to move right)");
@@ -77,7 +78,7 @@ if(global.tutorialComplete == 0) {
 	    draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Wowzers, Admiral Smith! That landing was... not ideal.");
 		draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Diagnostics suggest we just performed an unscheduled lithobrake maneuver.");
 		draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Let’s start with the basics. Can you move your feet for me?");
-		draw_text(507, camera_get_view_height(view_camera[0]) - 50, "D");
+		draw_text(461, camera_get_view_height(view_camera[0]) - 50, "D");
 	
 		draw_set_color(c_yellow);
 		draw_text(185, camera_get_view_height(view_camera[0]) - 50, "('A' to move left and ' ' to move right)");
@@ -215,35 +216,35 @@ if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storag
 
 //Level 3 Dialogue
 if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 0 && global.level3Stage >= 1) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 570, 1, 1, 0, c_white, 0.85);
 	
 	draw_set_color(c_white);
 	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+	draw_text(22, camera_get_view_height(view_camera[0]) - 720, "AI");
 
 	draw_set_color(c_green);
 	draw_set_font(fntAI);
 	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "These rock formations are... unstable.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Be careful! Those materials over there should help us fix the internal VAC doors.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "A warning, this cave looks large, keep an eye out on that oxygen!");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 700, "These rock formations are... unstable.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 670, "Be careful! Those materials over there should help us fix the internal VAC doors.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 640, "A warning, this cave looks large, keep an eye out on that oxygen!");
 }
 
 //Level 4 Starting Dialogue
 if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 0 && global.level4Stage == 1) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 570, 1, 1, 0, c_white, 0.85);
 	
 	draw_set_color(c_white);
 	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+	draw_text(22, camera_get_view_height(view_camera[0]) - 720, "AI");
 
 	draw_set_color(c_green);
 	draw_set_font(fntAI);
 	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "Whoa. My sensors are identifying some sort of liquid.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "It's energy is off the charts... Some repellent force.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "There is also some sort of artifact at the bottom of this resource rich cave.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 50, "Investigate with caution.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 700, "Whoa. My sensors are identifying some sort of liquid.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 670, "It's energy is off the charts... Some repellent force.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 640, "There is also some sort of artifact at the bottom of this resource rich cave.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 610, "Investigate with caution.");
 }
 
 //Level 4 Ending Dialogue
@@ -264,19 +265,19 @@ if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storag
 
 //Level 5 Starting Dialogue
 if(global.tutorialComplete == 1 && global.roboticsComplete == 1 && global.storageComplete == 1 && global.level2Complete == 1 && global.level3Complete == 1 && global.level4Complete == 1 && global.level5Stage == 1) {
-	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 10, 1, 1, 0, c_white, 0.85);
+	draw_sprite_ext(sprTutorialDialogue, dialogueFrame, 10, camera_get_view_height(view_camera[0]) - 570, 1, 1, 0, c_white, 0.85);
 	
 	draw_set_color(c_white);
 	draw_set_font(fntDefault);
-	draw_text(22, camera_get_view_height(view_camera[0]) - 160, "AI");
+	draw_text(22, camera_get_view_height(view_camera[0]) - 720, "AI");
 
 	draw_set_color(c_green);
 	draw_set_font(fntAI);
 	
-	draw_text(185, camera_get_view_height(view_camera[0]) - 140, "All systems... green. Except fuel.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 110, "Getting strange read-readings east of the sh-ship.");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 80, "Looks promising, but... sss-something’s off...");
-	draw_text(185, camera_get_view_height(view_camera[0]) - 50, "Bridge to source constructed...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 700, "All systems... green. Except fuel.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 670, "Getting strange read-readings east of the sh-ship.");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 640, "Looks promising, but... sss-something’s off...");
+	draw_text(185, camera_get_view_height(view_camera[0]) - 610, "Bridge to source constructed...");
 }
 
 //Level 5 Cave entering Dialogue

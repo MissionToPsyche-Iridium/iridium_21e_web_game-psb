@@ -13,7 +13,7 @@ l = 0;
 print = "";
 next = 0;
 holdspace = 0;
-strings = ["Created to support education of NASA's Psyche mission",
-"Thank you NASA for this opportunity",
-"Thank you PennState for everything you have taught us",
-"Thank you Arizona State University\n for you partnership in this captstone project"," "];
+strings = ["You won! Thanks for playing!",
+"To replay, please refresh the browser!",
+" ",
+" "," "];

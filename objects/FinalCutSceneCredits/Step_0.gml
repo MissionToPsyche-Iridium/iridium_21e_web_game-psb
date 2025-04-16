@@ -24,6 +24,6 @@ if (keyboard_check_direct(vk_space))
 if (holdspace > 80) || (xpos <= 250 ) fadeout = 1;
 
 if (a == 1) && (fadeout == 1) {
-	camera_set_view_pos(view_camera[0], 1048, 640);
-	room_goto(rm_start);
+	//camera_set_view_pos(view_camera[0], 1048, 640);
+	camera_set_view_pos(view_camera[0], 1280, 720);
 }

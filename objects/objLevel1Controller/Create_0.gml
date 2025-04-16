@@ -15,11 +15,11 @@ global.level4Fix = 0;
 global.level5Fix = 0;
 
 // Compy
-global.compyFix = 0;
 global.compyDialogue = 0;
 
 // Server
 global.serverFix = 0;
+global.storageComplete = 0;
 
 // Crane
 global.craneFix = 0;
@@ -39,6 +39,3 @@ global.resource_5_count = 0;
 
 // AirVac
 global.airVacOn = 0;
-
-// Delete
-global.collectedItems = ds_map_create();

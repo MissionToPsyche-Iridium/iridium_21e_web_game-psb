@@ -12,24 +12,25 @@ if(room == rmLevel3) {
 	instance_deactivate_object(caveIn2);
 	instance_deactivate_object(caveIn3);
 	instance_deactivate_object(caveIn4);
+	
+	// Destroy all
+	instance_destroy(Obj_O2_Tank);
 
-	if(instance_position(736, 2784, Obj_O2_Tank) == noone) {
-		instance_create_layer(736, 2784, "Instances", Obj_O2_Tank);
-	}
-	
-	if(instance_position(1728, 2240, Obj_O2_Tank) == noone) {
-		instance_create_layer(1728, 2240, "Instances", Obj_O2_Tank);
-	}
-	
-	if(instance_position(1696, 1152, Obj_O2_Tank) == noone) {
-		instance_create_layer(1696, 1152, "Instances", Obj_O2_Tank);
-	}
-	
-	if(instance_position(1344, 1440, Obj_O2_Tank) == noone) {
-		instance_create_layer(1344, 1440, "Instances", Obj_O2_Tank);
-	}
-	
-	if(instance_position(1408, 1408, Obj_O2_Tank) == noone) {
-		instance_create_layer(1408, 1408, "Instances", Obj_O2_Tank);
-	}
+	// Create all
+	instance_create_layer(736, 2784, "Instances", Obj_O2_Tank);
+	instance_create_layer(1728, 2240, "Instances", Obj_O2_Tank);
+	instance_create_layer(1696, 1152, "Instances", Obj_O2_Tank);
+	instance_create_layer(1344, 1440, "Instances", Obj_O2_Tank);
+	instance_create_layer(1408, 2624, "Instances", Obj_O2_Tank);
+}
+
+// Enter Level 4
+if(room == rmLevel4) {
+	// Destroy all
+	instance_destroy(Obj_O2_Tank);
+
+	// Create all
+	instance_create_layer(704, 544, "Instances", Obj_O2_Tank);
+	instance_create_layer(2467, 769, "Instances", Obj_O2_Tank);
+	instance_create_layer(2170, 959, "Instances", Obj_O2_Tank);
 }

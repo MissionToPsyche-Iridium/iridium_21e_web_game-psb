@@ -259,14 +259,12 @@
     {"name":"inst_7A0B46BE","path":"rooms/rmLevel2/rmLevel2.yy",},
     {"name":"inst_5308EC62","path":"rooms/rmLevel2/rmLevel2.yy",},
     {"name":"inst_492D3C34","path":"rooms/rmLevel2/rmLevel2.yy",},
-    {"name":"inst_788609C1","path":"rooms/rmLevel2/rmLevel2.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"gameObjects","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_6F46225E","colour":1694498815,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6F46225E","objectId":{"name":"objLevel2ExitTeleporter","path":"objects/objLevel2ExitTeleporter/objLevel2ExitTeleporter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":1400.0,"y":342.0,},
         {"$GMRInstance":"v2","%Name":"inst_492D3C34","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_492D3C34","objectId":{"name":"obj_musicr2","path":"objects/obj_musicr2/obj_musicr2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":-32.0,},
-        {"$GMRInstance":"v2","%Name":"inst_788609C1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_788609C1","objectId":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":-32.0,},
       ],"layers":[],"name":"gameObjects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"assets_z_0","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_7081C131","animationSpeed":1.0,"colour":4289901234,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7081C131","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sprRoboLightOn","path":"sprites/sprRoboLightOn/sprRoboLightOn.yy",},"x":800.0,"y":128.0,},

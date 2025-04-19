@@ -244,10 +244,10 @@ else {
 			}
 			
 			// Moving Platform
-			if place_meeting( x, y + 1, obj_moving_platform) {
+			if place_meeting( x, y + 1, obj_moving_platform_2) {
 				setOnGround(true);
-				x += obj_moving_platform.moveX;
-				y += obj_moving_platform.moveY;
+				x += obj_moving_platform_2.moveX;
+				y += obj_moving_platform_2.moveY;
 			}
 			
 			// Up / Down

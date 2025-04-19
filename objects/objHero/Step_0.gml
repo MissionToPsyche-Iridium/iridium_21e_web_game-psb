@@ -405,7 +405,7 @@ if jumpHoldTimer > 0 {
 		if place_meeting( x, y + 1, objCollision) {
 			setOnGround(true);
 		}
-		/*	
+			/*
 		// Moving Platform
 		if place_meeting( x, y + 1, obj_moving_platform) {
 			setOnGround(true);
@@ -413,15 +413,15 @@ if jumpHoldTimer > 0 {
 			y += obj_moving_platform.moveY;
 		}
 		*/
-		if place_meeting( x, y + 1, inst_4446C49B) {
+		if place_meeting( x, y + 1, obj_moving_platform_1) {
 			setOnGround(true);
-			x += inst_4446C49B.moveX;
-			y += inst_4446C49B.moveY;
+			x += obj_moving_platform_1.moveX;
+			y += obj_moving_platform_1.moveY;
 		}
-		if place_meeting( x, y + 1, inst_61B5109F) {
+		if place_meeting( x, y + 1, obj_moving_platform_2) {
 			setOnGround(true);
-			x += inst_61B5109F.moveX;
-			y += inst_61B5109F.moveY;
+			x += obj_moving_platform_2.moveX;
+			y += obj_moving_platform_2.moveY;
 		}
 	}
 		

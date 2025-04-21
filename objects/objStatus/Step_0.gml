@@ -17,12 +17,13 @@ if (mx > offset_x && mx < offset_x + gui_width &&
     my > offset_y && my < offset_y + gui_height) {
     
     if (mouse_check_button_pressed(mb_left)) {
-        if(sprIndex == 0) {
-			sprIndex = 1;
-		} else {
-			sprIndex = 0;
+		if(global.tutorialStage >= 4 || global.tutorialComplete == 1) {
+	        if(sprIndex == 0) {
+				sprIndex = 1;
+			} else {
+				sprIndex = 0;
+			}
 		}
-
     }
 }
 

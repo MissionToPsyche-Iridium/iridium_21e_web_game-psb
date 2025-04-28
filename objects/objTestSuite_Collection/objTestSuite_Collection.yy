@@ -8,8 +8,8 @@
   "name":"objTestSuite_Collection",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Tests",
+    "path":"folders/Objects/Tests.yy",
   },
   "parentObjectId":null,
   "persistent":false,

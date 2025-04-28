@@ -28,6 +28,7 @@
     {"$GMFolder":"","%Name":"LevelTeleporters","folderPath":"folders/Objects/LevelTeleporters.yy","name":"LevelTeleporters","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Playable","folderPath":"folders/Objects/Playable.yy","name":"Playable","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Start Page","folderPath":"folders/Objects/Start Page.yy","name":"Start Page","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Tests","folderPath":"folders/Objects/Tests.yy","name":"Tests","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -193,6 +194,7 @@
     {"id":{"name":"rmLevel3","path":"rooms/rmLevel3/rmLevel3.yy",},},
     {"id":{"name":"rmLevel4","path":"rooms/rmLevel4/rmLevel4.yy",},},
     {"id":{"name":"rmLevel5","path":"rooms/rmLevel5/rmLevel5.yy",},},
+    {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"id":{"name":"__crispy_config_macros","path":"scripts/__crispy_config_macros/__crispy_config_macros.yy",},},
     {"id":{"name":"__crispyStructUnpack","path":"scripts/__crispyStructUnpack/__crispyStructUnpack.yy",},},
     {"id":{"name":"Approach","path":"scripts/Approach/Approach.yy",},},
@@ -1241,6 +1243,7 @@
     {"roomId":{"name":"rmFinalCutscene","path":"rooms/rmFinalCutscene/rmFinalCutscene.yy",},},
     {"roomId":{"name":"rmFinalCredits","path":"rooms/rmFinalCredits/rmFinalCredits.yy",},},
     {"roomId":{"name":"rmCredits","path":"rooms/rmCredits/rmCredits.yy",},},
+    {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

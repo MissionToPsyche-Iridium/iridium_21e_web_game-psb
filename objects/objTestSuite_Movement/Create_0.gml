@@ -5,17 +5,20 @@ runner.addTestSuite(suite);
 
 // Test Case: Walk
 var tc_003 = new TestCase("tc_003", function() {
-	// Constants
-	var constantSpeed = 5;
+	// Mock inputs
+	//[
+		// Constants
+		var constantSpeed = 5;
 	
-    // Move Right
-    var moveSpd = [5, 10]; // Walking and running speeds
-    var runKey = 0; // Walking
-    var rightKey = 0;
-    var leftKey = 0;
-	var face = 1;
+	    // Move Right
+	    var moveSpd = [5, 10]; // Walking and running speeds
+	    var runKey = 0; // Walking
+	    var rightKey = 1;
+	    var leftKey = 0;
+		var face = 1;
+	//]
 	
-	// Logic
+	// Walking Logic
 	//[
 	    var moveDir = rightKey - leftKey;
 	
